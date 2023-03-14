@@ -1,4 +1,4 @@
-# AHKScript
+# AhkScript
 
 A GitHub copy of my personal AutoHotkey script. 
 
