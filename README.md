@@ -8,7 +8,7 @@ This Project is written in AutoHotkey2 (I mean version 2) which is fundamentally
 
 ## 💌 What are these AutoHotkey Scripts ?
 
-Ahk Scripts make any desire in key-binds possible no matter how weird that desire is. Or you can overcome any problems that developers can leave in their games keybind-design (For example in dota "Alt+`" just doesn't work for some Source 2 reason). But there is so much more... 
+Ahk Scripts make any desire in key-binds possible no matter how weird that desire is. Or you can overcome any keybind-design problems that developers leave out in their games (For example in dota "Alt+`" just doesn't work for some Source 2 reason). Really, there is so much more to AutoHotkey Scripting. It's truly cool... 
 
 ## 🎮 What this repo has
 
