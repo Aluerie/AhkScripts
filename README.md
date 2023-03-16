@@ -4,7 +4,7 @@ My personal collection of Ahk Scripts.
 
 ## 👻 Disclaimer
 
-This repo is written in Ahk v2 which is fundamentally different from v1.1. 
+This Project is written in AutoHotkey2 (I mean version 2) which is fundamentally different from v1.1. 
 
 ## 💌 What are these AutoHotkey Scripts ?
 
@@ -12,19 +12,19 @@ Ahk Scripts make any desire in key-binds possible no matter how weird that desir
 
 ## 🎮 What this repo has
 
-You can read folder names to see what games I have scripts for. 
+You can read folder names to see what games I have scripts for. I might hide some games in different/depreciated branches so the code is there but isn't noisy. So check branches list too. 
 
 ## 🛠️ Installing
 
 You need to generate `.exe` file with standard Ahk2exe procedure:
-- you need to install [AutoHotkey](https://www.autohotkey.com/).
-- Choose Compile option that will download/open Ahk2exe application.
+- Install [AutoHotkey](https://www.autohotkey.com/).
+- choose Compile option that will download/open Ahk2exe application.
 - Choose `ahk_main.ahk` from current repo as Source (script file).
 - Press "Convert"
 - It will generate `ahk_main.exe` file which you can just run for keybinds to work
 - Now if you want the `.exe` to work persistent through Windows reboots follow the section below
 
-## 🔃 Making scripts work persistent from Windows reboots
+## 🔃 Making scripts work persistent through Windows reboots
 
 * Make a shortcut for `ahk_main.exe` generated in the previous section (but `ahk_main - Shortcut.lnk` should already exist and be fine).
 * Put the shortcut into special Windows `Startup` folder:

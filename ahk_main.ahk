@@ -1,9 +1,9 @@
 ;---- Adapting some nomenclature for the subroutines, functions, global variables, variables.
-;---- G_ 	Global Variable
-;---- V_ 	Variable
-;---- S_  	Subroutine
-;---- F_ 	function
-;---- C_    class
+;---- g_ 	Global Variable
+;---- v_ 	Variable
+;---- s_  	Subroutine
+;---- f_ 	function
+;---- c_    class
 
 #SingleInstance Force
 #Warn
@@ -18,5 +18,6 @@ SendMode "InputThenPlay"
 
 SetDefaultMouseSpeed 0
 
-#include %A_ScriptDir%\Dota2\dota2.ahk
-#include %A_ScriptDir%\EldenRing\_init.ahk
+; #include %A_ScriptDir%\debug\__init__.ahk
+#include %A_ScriptDir%\Dota2\__init__.ahk
+#include %A_ScriptDir%\EldenRing\__init__.ahk
