@@ -17,5 +17,5 @@ f_PouchRight() {
 ; Pouch Keybinds
 c:: f_PouchUp()
 v:: f_PouchDown()
-CapsLock:: f_PouchLeft()
+Tab:: f_PouchLeft()
 f2:: f_PouchRight()
