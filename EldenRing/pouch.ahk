@@ -23,11 +23,11 @@ f_PouchSix() {
 }
 
 ; Pouch quick Keybinds
-r:: f_PouchUp()
-c:: f_PouchDown()
-v:: f_PouchRight()
-Tab:: f_PouchLeft()
+c:: f_PouchUp()        ; mana
+v:: f_PouchDown()      ; physick
+SC029:: f_PouchRight() ; spirits
+Tab:: f_PouchLeft()    ; torrent
 
 ; Pouch with Esc
-f1:: f_PouchFive()
-f2:: f_PouchSix()
+f1:: f_PouchFive()     ; lantern
+f2:: f_PouchSix()      ; rainbow
