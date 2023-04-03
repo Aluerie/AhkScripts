@@ -1,7 +1,7 @@
 f_EventActionCombo(secondary_key) {
-    Send "{" g_EventAction " down} {" secondary_key " down}"
+    Send "{" g_EventAction " down}{" secondary_key " down}"
     sleep 25
-    Send "{" secondary_key " up} {" g_EventAction " up}"
+    Send "{" secondary_key " up}{" g_EventAction " up}"
 }
 
 f_EscapeKeyPress(x, y) {

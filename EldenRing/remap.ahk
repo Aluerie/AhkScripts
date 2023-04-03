@@ -8,9 +8,9 @@ CapsLock::r
 ; this is for random context menus like Summon Torrent YES NO
 
 LWin:: {
-    Send "{Left down} "
+    Send "{Left down}"
     Sleep 25
-    Send "{ " g_EventAction " down } "
+    Send "{" g_EventAction " down}"
     Sleep 25
-    Send "{" g_EventAction " up} {Left up}"
+    Send "{" g_EventAction " up}{Left up}"
 }
