@@ -1,8 +1,9 @@
 ; classic Windows key rebind
-; I would rebind it to some f-key but it's not bindandle in Elden Ring
+; I would rebind it to some f-key but it's not bindabndle in Elden Ring
 
 ; so we dont capslock people when we alt tab back
-CapsLock::u
+; also bind to r for easier menu-ing
+CapsLock::r
 
 ; this is for random context menus like Summon Torrent YES NO
 

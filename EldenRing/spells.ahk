@@ -1,5 +1,5 @@
 global g_SpellSlots := 7
-;; TOOD: idk make a GUI for this so we can change it dynamically
+;; TODO: idk make a GUI for this so we can change it dynamically
 global g_CurrentSpellSlot := 0
 global isCycling := 0
 

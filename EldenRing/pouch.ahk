@@ -23,9 +23,9 @@ f_PouchSix() {
 }
 
 ; Pouch quick Keybinds
-c:: f_PouchUp()        ; mana
-v:: f_PouchDown()      ; physick
-SC029:: f_PouchRight() ; spirits
+r:: f_PouchUp()        ; heal
+c:: f_PouchDown()      ; mana
+v:: f_PouchRight()     ; physick 
 Tab:: f_PouchLeft()    ; torrent
 
 ; Pouch with Esc

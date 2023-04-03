@@ -5,6 +5,9 @@ f_EventActionCombo(secondary_key) {
 }
 
 f_EscapeKeyPress(x, y) {
+    ; this kinda breaks if you move the cursor too fast
+    ; but i have not managed to make it work with
+    ; Click or MouseClick functions with their 'Down' keywords
     Send "{Escape down}"
     sleep 200 ;300
     MouseMove(x, y)

@@ -11,7 +11,7 @@ ELDEN RING
 ; REMEMBER TO CHANGE THOSE IF YOU CHANGE THE GAME SETTINGS !!!
 g_EventAction := "e"
 g_UpSwitchSorceryIncantation := "3"
-g_DownSwitchItem := "4"
+g_DownSwitchItem := "f"
 g_LeftSwitchLeftHandArm := "z"
 g_RightSwitchRightHandArm := "x"
 g_Attack_RH_2H := "LButton"
