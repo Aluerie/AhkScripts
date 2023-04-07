@@ -4,6 +4,7 @@
 ; so we dont capslock people when we alt tab back
 ; also bind to r for easier menu-ing
 CapsLock::r
+4::f
 
 ; this is for random context menus like Summon Torrent YES NO
 
