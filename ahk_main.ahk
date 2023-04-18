@@ -13,11 +13,11 @@ A_HotkeyInterval := 2000  ; This is the default value (milliseconds).
 A_MaxHotkeysPerInterval := 200
 
 ProcessSetPriority "A" 		; sets a higher priority affinity to help reduce input latency
-SetControlDelay 0			; 0 is the recommmended lowest setting  https://www.autohotkey.com/docs/commands/SetControlDelay.htm
+SetControlDelay 0			; 0 is the recommended lowest setting  https://www.autohotkey.com/docs/commands/SetControlDelay.htm
 SendMode "InputThenPlay"
 
 SetDefaultMouseSpeed 0
 
 ; #include %A_ScriptDir%\debug\__init__.ahk
 #include %A_ScriptDir%\Dota2\__init__.ahk
-#include %A_ScriptDir%\EldenRing\__init__.ahk
+; #include %A_ScriptDir%\EldenRing\__init__.ahk
