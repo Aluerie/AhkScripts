@@ -18,9 +18,12 @@ LWin::F14
 Esc::F18
 ; Alt + (Grave Accent / Tilde)
 SC029::AppsKey
-^LWin::F17
-+LWin::NumpadAdd
+^LWin::NumpadAdd
++LWin::F17
 ; LAlt::NumpadSub
+
+; idk why but NumpadEnter stopped working for me in dota in the same way as normal Enter
+NumpadEnter::Enter
 
 ; Since we rebind LWin above --- Win + Key keybinds won't work by default
 ; meaning we need to bring them back - maybe there is a better way but here is mine
