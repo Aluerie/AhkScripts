@@ -20,4 +20,9 @@ SetDefaultMouseSpeed 0
 
 ; #include %A_ScriptDir%\debug\__init__.ahk
 #include %A_ScriptDir%\Dota2\__init__.ahk
+
+; Elden Ring
 ; #include %A_ScriptDir%\EldenRing\__init__.ahk
+
+; League of Legends
+#include %A_ScriptDir%\LeagueOfLegends\__init__.ahk
