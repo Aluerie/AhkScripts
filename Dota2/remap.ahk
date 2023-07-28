@@ -11,8 +11,11 @@ For more,
     https://www.autohotkey.com/docs/v2/KeyList.htm
 */
 
+; Win + ESC
+^ESC::ESC
 CapsLock::F13
 LWin::F14
+Esc::F18
 ; Alt + (Grave Accent / Tilde)
 SC029::AppsKey
 ^LWin::NumpadAdd
