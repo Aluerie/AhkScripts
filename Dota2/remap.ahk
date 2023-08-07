@@ -12,9 +12,10 @@ For more,
 */
 
 ; Win + ESC
-^ESC::ESC
 Esc::Numpad7
-LWin::Numpad1
+Home::ESC
+
+LWin::AppsKey
 CapsLock::Numpad4
 ; Alt + (Grave Accent / Tilde)
 ^LWin::Numpad2
