@@ -9,7 +9,6 @@ WheelDown:: {
 }
 
 CapsLock::Numpad4
-LWin::Numpad1
 
 <#D:: ComObject("Shell.Application").ToggleDesktop()
 
