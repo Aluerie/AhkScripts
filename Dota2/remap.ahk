@@ -13,14 +13,12 @@ For more,
 
 ; Win + ESC
 ^ESC::ESC
-CapsLock::F13
-LWin::F14
-Esc::F18
+Esc::Numpad7
+LWin::Numpad1
+CapsLock::Numpad4
 ; Alt + (Grave Accent / Tilde)
-SC029::AppsKey
 ^LWin::NumpadAdd
 +LWin::F17
-; LAlt::NumpadSub
 
 ; idk why but NumpadEnter stopped working for me in dota in the same way as normal Enter
 NumpadEnter::Enter
