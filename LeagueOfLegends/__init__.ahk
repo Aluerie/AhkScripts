@@ -8,11 +8,8 @@ WheelDown:: {
     send "{F3}"
 }
 
-SC029::f9
-LWin::F10
-CapsLock::F11
-F23::NumpadMult
-F20::NumpadSub
+CapsLock::Numpad4
+LWin::Numpad1
 
 <#D:: ComObject("Shell.Application").ToggleDesktop()
 
