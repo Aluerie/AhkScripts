@@ -18,6 +18,8 @@ SendMode "InputThenPlay"
 
 SetDefaultMouseSpeed 0
 
+#include %A_ScriptDir%\General\general.ahk
+
 ; #include %A_ScriptDir%\debug\__init__.ahk
 #include %A_ScriptDir%\Dota2\__init__.ahk
 
