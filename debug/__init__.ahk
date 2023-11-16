@@ -15,7 +15,8 @@ g_DebugMessage := "MyVariable = " v_MyVariable "rofl"
 into the function you want to test
 */
 
-KeyHistory
+; ATTENTION !!!
+; KeyHistory ; UNCOMMENT THIS TO SEE THE KEY HISTORY WINDOW
 KeyHistory 400
 InstallMouseHook
 

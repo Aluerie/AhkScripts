@@ -4,7 +4,16 @@
 ;---- s_  	Subroutine
 ;---- f_ 	function
 ;---- c_    class
+/*
+# - Windows
+! - Alt
+^ - Ctrl
++ - Shift
 
+For more,
+* Hotkeys - https://www.autohotkey.com/docs/v2/Hotkeys.htm
+* KeyList - https://www.autohotkey.com/docs/v2/KeyList.htm
+*/
 #SingleInstance Force
 #Warn
 ; #NoTrayIcon
@@ -18,9 +27,13 @@ SendMode "InputThenPlay"
 
 SetDefaultMouseSpeed 0
 
+; Windows daily life
 #include %A_ScriptDir%\Windows\general.ahk
 
+; Debug print on the screen :D
 ; #include %A_ScriptDir%\debug\__init__.ahk
+
+; Dota 2
 #include %A_ScriptDir%\Dota2\__init__.ahk
 
 ; Elden Ring

@@ -1,27 +1,29 @@
-/*
-# - Windows
-! - Alt
-^ - Ctrl
-+ Shift
-
-For more,
-    * Hotkeys
-    https://www.autohotkey.com/docs/v2/Hotkeys.htm
-    * KeyList
-    https://www.autohotkey.com/docs/v2/KeyList.htm
-*/
-
 ; Win + ESC
 Esc::Numpad7
 Home::ESC
 
 LWin::AppsKey
 CapsLock::Numpad4
-; Alt + (Grave Accent / Tilde)
-^LWin::Numpad2
 
-; idk why but NumpadEnter stopped working for me in dota in the same way as normal Enter
+!SC029::Numpad3 ; Alt + (Grave Accent / Tilde)
+
+; NumpadEnter stopped working for me in dota in the same way as normal Enter xd
 NumpadEnter::Enter
+
+; I want to use Taunt on WheelUp but Dota spams me with cooldown messages 
+; So let's do it my rate limiting way
+global StartTime := 0
+
+WheelUp:: {
+    global StartTime
+    if (A_TickCount - StartTime  > 2000) {
+        StartTime := A_TickCount
+        Send "{PgUp}"
+        Send "{WheelUp}"
+    }
+    else
+        Send "{WheelUp}"
+}
 
 ; Since we rebind LWin above --- Win + Key keybinds won't work by default
 ; meaning we need to bring them back - maybe there is a better way but here is mine
