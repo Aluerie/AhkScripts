@@ -12,14 +12,3 @@ f_SelectAllyN(ally_N) {
 !f3:: f_SelectAllyN("{!f3}")
 !f4:: f_SelectAllyN("{!f4}")
 !5:: f_SelectAllyN("{!5}")
-
-/*
-Failure of the past
-
-; Select Ally Keys
-!f1::Numpad1
-!F2::Numpad2
-!f3::Numpad3
-!f4::Numpad4
-!5::Numpad5
-*/

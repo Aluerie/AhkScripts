@@ -1,13 +1,12 @@
-; Win + ESC
+; Unbindable keys by default
 Esc::Numpad7
-Home::ESC
-
-LWin::AppsKey
-CapsLock::Numpad4
-
 !SC029::Numpad3 ; Alt + (Grave Accent / Tilde)
+CapsLock::Numpad4
+LWin::AppsKey
 
-; NumpadEnter stopped working for me in dota in the same way as normal Enter xd
+Home::ESC  ; so we have ESC key for showcase, etc.
+
+; NumpadEnter stopped working for me in dota in the same way as normal Enter
 NumpadEnter::Enter
 
 ; I want to use Taunt on WheelUp but Dota spams me with cooldown messages 
