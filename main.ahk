@@ -18,6 +18,10 @@ For more,
 #Warn
 ; #NoTrayIcon
 
+; KeyHistory ; UNCOMMENT THESE 3 lines TO SEE THE KEY HISTORY WINDOW
+; KeyHistory 400
+; InstallMouseHook
+
 A_HotkeyInterval := 2000    ; This is the default value (milliseconds).
 A_MaxHotkeysPerInterval := 200
 

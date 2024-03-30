@@ -37,17 +37,7 @@ pouch_six() {
     press_sequence(["escape", "left", "down", "down", "e", "escape"])
 }
 
-; === PART 4. Annoying PopUP notification ===
-
-deal_with_notification() {
-    Send "{left down}"
-    Sleep MINIMUM_KEY_PRESS_DURATION
-    Send "{e down}"
-    Sleep MINIMUM_KEY_PRESS_DURATION
-    Send "{e up}{left up}"
-}
-
-; === PART 5. GESTURES ===
+; === PART 4. GESTURES ===
 
 gesture_1() {
     press_sequence(["escape", "up", "right", "up", "up", "e", "escape"])
@@ -71,4 +61,20 @@ gesture_5() {
 
 gesture_6() {
     press_sequence(["escape", "up", "left", "e", "escape"])
+}
+
+; === PART 5. Annoying QoL Utilities ===
+
+deal_with_notification() {
+    Send "{left down}"
+    Sleep MINIMUM_KEY_PRESS_DURATION
+    Send "{e down}"
+    Sleep MINIMUM_KEY_PRESS_DURATION
+    Send "{e up}{left up}"
+}
+
+quit_out() {
+    press_sequence(["escape", "up", "e"])
+    Sleep MINIMUM_KEY_PRESS_DURATION * 2
+    press_sequence(["z", "e", "left", "e"])
 }

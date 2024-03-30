@@ -28,8 +28,14 @@ WheelUp:: {
 ; meaning we need to bring them back - maybe there is a better way but here is mine
 ; since i only use `Win Shift S` in dota then let's bring only it.
 
-#HotIf WinActive("ahk_exe dota2.exe") && Getkeystate("LShift", "p")
-LWin & S:: Run("ms-screenclip:")
+LWin & S:: {
+    if Getkeystate("LShift", "p") {
+        Run("ms-screenclip:")
+    }
+}
 
-#HotIf WinActive("ahk_exe dota2.exe") && Getkeystate("LWin", "p")
-LShift & S:: Run("ms-screenclip:")
+LShift & S:: {
+    if Getkeystate("LWin", "p") {
+        Run("ms-screenclip:")
+    }
+}

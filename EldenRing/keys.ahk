@@ -45,3 +45,4 @@ f8::gesture_6()
 
 ; Random context menus like Summon Torrent YES NO
 LWin::deal_with_notification()
+n::quit_out()
