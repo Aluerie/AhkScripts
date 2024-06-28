@@ -30,11 +30,12 @@ pouch_right() {
 ; === PART 3. POUCH FROM ESC SCREEN ===
 
 pouch_five() {
-    press_sequence(["escape", "right", "down", "down", "e", "escape"])
+    ; double e only cause it can glitch
+    press_sequence(["escape", "right", "down", "down", "e", "e", "escape"])
 }
 
 pouch_six() {
-    press_sequence(["escape", "left", "down", "down", "e", "escape"])
+    press_sequence(["escape", "left", "down", "down", "e", "e", "escape"])
 }
 
 ; === PART 4. GESTURES ===
@@ -67,14 +68,16 @@ gesture_6() {
 
 deal_with_notification() {
     Send "{left down}"
-    Sleep MINIMUM_KEY_PRESS_DURATION
+    Sleep TIME_BETWEEN_KEYS
     Send "{e down}"
-    Sleep MINIMUM_KEY_PRESS_DURATION
+    Sleep TIME_BETWEEN_KEYS
     Send "{e up}{left up}"
 }
 
 quit_out() {
-    press_sequence(["escape", "up", "e"])
-    Sleep MINIMUM_KEY_PRESS_DURATION * 2
-    press_sequence(["z", "e", "left", "e"])
+    BlockInput true
+    press_sequence(["escape", "up", "e"], 50)
+    Sleep 110
+    press_sequence(["z", "e", "left", "e", "e", "e"], 50)
+    BlockInput false
 }

@@ -14,6 +14,7 @@ For more,
 * Hotkeys - https://www.autohotkey.com/docs/v2/Hotkeys.htm
 * KeyList - https://www.autohotkey.com/docs/v2/KeyList.htm
 */
+#Requires AutoHotkey v2.0
 #SingleInstance Force
 #Warn
 ; #NoTrayIcon
@@ -25,20 +26,18 @@ For more,
 A_HotkeyInterval := 2000    ; This is the default value (milliseconds).
 A_MaxHotkeysPerInterval := 200
 
-ProcessSetPriority "A" 	    ; sets a higher priority affinity to help reduce input latency
+ProcessSetPriority "Realtime" 	    ; sets a higher priority affinity to help reduce input latency
 SetControlDelay 0		    ; 0 is the recommended lowest setting  https://www.autohotkey.com/docs/commands/SetControlDelay.htm
 SendMode "InputThenPlay"
 
 SetDefaultMouseSpeed 0
 
-; Windows daily life
-#include %A_ScriptDir%\Windows\general.ahk
+; DEBUG
+; #include %A_ScriptDir%\debug\__init__.ahk           ; Debug Print for this script
 
-; Debug print on the screen :D
-; #include %A_ScriptDir%\debug\__init__.ahk
-
-; Dota 2
-#include %A_ScriptDir%\Dota2\__init__.ahk
-
-; Elden Ring
-#include %A_ScriptDir%\EldenRing\__init__.ahk
+; COGS
+#include %A_ScriptDir%\Windows\general.ahk          ; Windows Daily Life
+#include %A_ScriptDir%\Dota2\__init__.ahk           ; Dota 2
+#include %A_ScriptDir%\EldenRing\__init__.ahk       ; Elden Ring
+#include %A_ScriptDir%\Sekiro\sekiro.ahk            ; Sekiro
+#include %A_ScriptDir%\Hades\hades.ahk              ; Hades
