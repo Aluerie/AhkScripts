@@ -13,24 +13,34 @@
 For more,
 * Hotkeys - https://www.autohotkey.com/docs/v2/Hotkeys.htm
 * KeyList - https://www.autohotkey.com/docs/v2/KeyList.htm
+
+
+ADVICE:
+
+One of the biggest problems I ever faced:
+Q::ESC - it will only work for Shift+Q bcs it's a big Q
+correct way:
+q::ESC
+
 */
-#Requires AutoHotkey v2.0
+KeyHistory 0
+ListLines False
+
+; DEBUG
+;
+; UNCOMMENT THESE 3 lines TO SEE THE KEY HISTORY WINDOW
+; KeyHistory
+; KeyHistory 400
+; InstallMouseHook  ; need for mouse events
 #SingleInstance Force
-#Warn
 ; #NoTrayIcon
 
-; KeyHistory ; UNCOMMENT THESE 3 lines TO SEE THE KEY HISTORY WINDOW
-; KeyHistory 400
-; InstallMouseHook
-
+; Allows a maximum of 200 hotkeys to be pressed within 2000 ms without triggering a warning dialog.
 A_HotkeyInterval := 2000    ; This is the default value (milliseconds).
 A_MaxHotkeysPerInterval := 200
 
-ProcessSetPriority "Realtime" 	    ; sets a higher priority affinity to help reduce input latency
-SetControlDelay 0		    ; 0 is the recommended lowest setting  https://www.autohotkey.com/docs/commands/SetControlDelay.htm
+ProcessSetPriority "AboveNormal"  ; "Realtime"
 SendMode "InputThenPlay"
-
-SetDefaultMouseSpeed 0
 
 ; DEBUG
 ; #include %A_ScriptDir%\debug\__init__.ahk           ; Debug Print for this script

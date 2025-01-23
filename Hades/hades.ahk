@@ -1,5 +1,11 @@
-; #HotIf WinActive("ahk_exe hades.exe")
+#HotIf WinActive("ahk_exe hades.exe")
 
-; Q::ESC
+q::Escape
 
-; #HotIf
+#HotIf
+
+#HotIf WinActive("ahk_exe Hades2.exe")
+
+q::Escape
+
+#HotIf

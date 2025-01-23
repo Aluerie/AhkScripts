@@ -2,8 +2,8 @@
 
 ; Switch Armament - Settings.
 ; Note. up/down/left/right correlate to HUD position and default "e"+press settings.
-UP_SWITCH_SORCERY_INCANTATION := "Left"
-DOWN_SWITCH_ITEM := "f"
+UP_SWITCH_SORCERY_INCANTATION := "Down"
+DOWN_SWITCH_ITEM := "Left"
 LEFT_SWITCH_LEFT_HAND_ARM := "z"
 RIGHT_SWITCH_RIGHT_HAND_ARM := "x"
 
@@ -16,16 +16,23 @@ GUARD_LH := "RButton"
 ; EVENT_ACTION := "e"
 
 ; === PART 2. REMAP SOME KEYS WITHOUT ANY EXTRA MAGIC ===
-CapsLock::r     ; To be able to use "R" in menuing
-3::Left         ; To deal with notifications like "resummon torrent?"
-4::f            ; For Sniper Mode in bows: so 3 would be zoom in and 4 zoom out.
-SC029::ESC      ; easier hard-swap
+CapsLock::r
+Shift::f
+
+2::Up
+3::Down
+
+f::Left
+g::Right
+
+1::ESC
+
 
 ; === PART 3. AHK UTILITIES FOR BETTER QOL ===
 
 ; Two Hand Keybinds
-1:: two_hand_left()
-2:: two_hand_right()
+; 1:: two_hand_left()
+; 2:: two_hand_right()
 
 ; Pouch KeyBinds
 r:: pouch_up()        ; heal
@@ -38,7 +45,8 @@ f1:: pouch_five()     ; lantern
 f2:: pouch_six()      ; rainbow
 
 ; Gestures
-; f3:: gesture_1()
+f3:: gesture_6()
+
 ; f4:: gesture_2()
 ; f5:: gesture_3()
 ; f6:: gesture_4()
@@ -47,8 +55,19 @@ f2:: pouch_six()      ; rainbow
 
 ; Random context menus like Summon Torrent YES NO
 ; AppsKey:: deal_with_notification()
-n:: quit_out()
+; n:: quit_out()
 
 ; bring back lost c and v
-<::c
->::v
+; <::c
+; >::v
+
+; QUIT OUT SEQUENCE
+
+; 3::e
+; 4::z
+; 5::e
+; 6::Left
+; 7::e
+; 8::e
+
+; SC029::Down

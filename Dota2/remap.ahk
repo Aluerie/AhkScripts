@@ -1,11 +1,12 @@
 ; # SECTION 1. NON-BINDABLE KEYS BY DEFAULT
 Esc::Numpad7
 !SC029::Numpad8                 ; Alt + (Grave Accent / Tilde)
-CapsLock::Numpad4
+
 ; # SECTION 2. FIX FOR MINOR ISSUES 
 Insert::ESC                     ; so we have ESC key for showcase, etc.
 NumpadEnter::Enter              ; For some reason it doesn't work in the same manner as normal Enter sometimes
 AppsKey::AppsKey                ; "real LWin"::AppsKey, it has to be repeated so Windows/general.ahk doesn't eat it.
+LWin::AppsKey
 
 ; SECTION 3. TAUNT CD PROBLEM
 ; I want to use Taunt on WheelUp but Dota spams me with cooldown messages
