@@ -1,16 +1,26 @@
-; # SECTION 1. NON-BINDABLE KEYS BY DEFAULT
+/* Dota 2
+
+Features
+--------
+# TODO: Write features
+
+*/
+
+#HotIf WinActive("ahk_exe dota2.exe")
+
+; NON-BINDABLE KEYS BY DEFAULT
 Esc::Numpad7
 !SC029::Numpad8                 ; Alt + (Grave Accent / Tilde)
 
-; # SECTION 2. FIX FOR MINOR ISSUES 
+; FIX FOR MINOR ISSUES 
 Insert::ESC                     ; so we have ESC key for showcase, etc.
 NumpadEnter::Enter              ; For some reason it doesn't work in the same manner as normal Enter sometimes
 AppsKey::AppsKey                ; "real LWin"::AppsKey, it has to be repeated so Windows/general.ahk doesn't eat it.
 LWin::AppsKey
 
-; SECTION 3. TAUNT CD PROBLEM
+; TAUNT CD PROBLEM
 ; I want to use Taunt on WheelUp but Dota spams me with cooldown messages
-; So let's do it my rate limiting way
+; So let's do some rate limiting
 global StartTime := 0
 
 WheelUp:: {
@@ -24,7 +34,6 @@ WheelUp:: {
         Send "{WheelUp}"
 }
 
-; SECTION 4. SCREENSHOT PROBLEM
 ; Since we rebind LWin above --- Win + Key keybinds won't work by default
 ; meaning we need to bring them back - maybe there is a better way but here is mine
 ; since i only use `Win Shift S` in dota then let's bring only it.
@@ -47,3 +56,4 @@ LShift & S:: {
     }
 }
 
+#HotIf
