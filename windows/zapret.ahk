@@ -21,11 +21,11 @@ ZapretMenu.Add("Hide", tray_hide)
 ZapretMenu.Add("Run", tray_run)
 
 run_zapret() {
-    Run "C:\DPI\YTDisBystro\1_preset_russia.cmd", , "Hide"
+    Run "C:\Programs Portable\YTDisBystro\1_preset_russia.cmd", , "Hide"
     WinWait(ZAPRET_WINDOW_NAME)
     WinHide(ZAPRET_WINDOW_NAME)
 }
-run_zapret()
+; run_zapret()
 
 tray_show(ItemName, ItemPos, MyMenu) {
     DetectHiddenWindows true

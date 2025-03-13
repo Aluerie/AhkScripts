@@ -23,4 +23,4 @@ SendMode "InputThenPlay"
 
 ; WINDOWS
 #include %A_ScriptDir%\windows\general.ahk          ; Windows Daily Life
-#include %A_ScriptDir%\windows\zapret.ahk           ; Zapret
+; #include %A_ScriptDir%\windows\zapret.ahk           ; Zapret
