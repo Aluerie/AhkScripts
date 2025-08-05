@@ -12,11 +12,11 @@ Features
 Esc::Numpad7
 !SC029::Numpad8                 ; Alt + (Grave Accent / Tilde)
 
-; FIX FOR MINOR ISSUES 
+; FIX FOR MINOR ISSUES
 Insert::ESC                     ; so we have ESC key for showcase, etc.
 NumpadEnter::Enter              ; For some reason it doesn't work in the same manner as normal Enter sometimes
-AppsKey::AppsKey                ; "real LWin"::AppsKey, it has to be repeated so Windows/general.ahk doesn't eat it.
-LWin::AppsKey
+; AppsKey::AppsKey                ; "real LWin"::AppsKey, it has to be repeated so Windows/general.ahk doesn't eat it.
+; LWin::AppsKey
 
 ; TAUNT CD PROBLEM
 ; I want to use Taunt on WheelUp but Dota spams me with cooldown messages
@@ -38,21 +38,35 @@ WheelUp:: {
 ; meaning we need to bring them back - maybe there is a better way but here is mine
 ; since i only use `Win Shift S` in dota then let's bring only it.
 
-LWin & S:: {
-    if Getkeystate("LShift", "p") {
-        Run("ms-screenclip:")
-    }
-    else {
-        Send "{LWin} & {S}"
-    }
-}
+; AppsKey & S:: {
+;     if Getkeystate("LShift", "p") {
+;         Run("ms-screenclip:")
+;     }
+;     else { 
+;         Send "{LWin} & {S}"
+;     }
+; }
 
-LShift & S:: {
-    if Getkeystate("AppsKey", "p") {
-        Run("ms-screenclip:")
-    }
-    else {
-        Send "{LShift} & {S}"
+; LShift & S:: {
+;     if Getkeystate("AppsKey", "p") {
+;         Run("ms-screenclip:")
+;     }
+;     else {
+;         Send "{LShift} & {S}"
+;     }
+; }
+
+; For afk farm in Silt-breaker
+PgUp:: {
+    while (!GetKeyState("LButton")) {
+        MouseMove 1180 + Random(0, 200), 620 + Random(0, 200)
+        Send "{RButton}"
+        Send "{End}"
+        Sleep 4000
+        Send "{F1}" 
+        Sleep 4000
+        Send "{Space}"
+        Sleep 4000
     }
 }
 

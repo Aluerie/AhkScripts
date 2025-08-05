@@ -8,7 +8,7 @@
             "type": "autohotkey",
             "request": "launch",
             "name": "MAIN AHK",
-            "program": "D:\\LAPTOP\\AhkScripts\\main.ahk",
+            "program": "D:\\CODE\\AhkScripts\\main.ahk",
         },
     ]
 }

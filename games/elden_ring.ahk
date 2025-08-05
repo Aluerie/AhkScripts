@@ -135,8 +135,9 @@ quit_out() {
 
 #HotIf WinActive("ahk_exe eldenring.exe")
 
+; ESC::9
 CapsLock::r
-Shift::f
+LShift::f
 
 1::ESC
 2::Up
@@ -150,8 +151,8 @@ c:: pouch_down()      ; mana
 v:: pouch_right()     ; physick
 Tab:: pouch_left()    ; torrent
 
-f1:: pouch_five()     ; lantern
-f2:: pouch_six()      ; rainbow
+; f1:: pouch_five()     ; lantern
+; f2:: pouch_six()      ; rainbow
 
 ; UNUSED
 ; 1:: two_hand_left()
