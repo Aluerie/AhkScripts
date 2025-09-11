@@ -6,14 +6,14 @@ Features
 
 */
 
-; SECTION 1. MY PREFERENCES 
+; SECTION 1. MY PREFERENCES
 
 KEY_PRESS_DURATION := 30
 TIME_BETWEEN_KEYS := 23
 
 ; Switch Armament - Settings.
-; Note. up/down/left/right correlate to HUD position and default "e"+press settings.
-UP_SWITCH_SORCERY_INCANTATION := "Down"
+; Note: up/down/left/right correlate to HUD position and default "e"+press settings.
+UP_SWITCH_SORCERY_INCANTATION := "c"
 DOWN_SWITCH_ITEM := "Left"
 LEFT_SWITCH_LEFT_HAND_ARM := "z"
 RIGHT_SWITCH_RIGHT_HAND_ARM := "x"
@@ -22,7 +22,7 @@ RIGHT_SWITCH_RIGHT_HAND_ARM := "x"
 ATTACK_RH_2H := "LButton"
 GUARD_LH := "RButton"
 
-; Note. A lot of functions below depend on Event Action key being "e"
+; Note: a lot of functions below depend on Event Action key being "e"
 ; But we don't write it because we probably won't ever change it. It's just a bit easier.
 ; EVENT_ACTION := "e"
 
@@ -50,7 +50,7 @@ press_key(key, duration := 0) {
 press_sequence(sequence, time_between_presses := 0) {
     /* Press sequence of keys */
     time_between_presses := time_between_presses ? time_between_presses : TIME_BETWEEN_KEYS
-    For index, value in sequence {
+    for index, value in sequence {
         press_key(value)
         Sleep time_between_presses
     }
@@ -135,28 +135,31 @@ quit_out() {
 
 #HotIf WinActive("ahk_exe eldenring.exe")
 
-; ESC::9
-CapsLock::r
+Escape::SC045  ; Pause
 LShift::f
 
 1::ESC
-2::Up
-3::Down
+; 2::Up
+; 3::Down
+
+v::o
+
+LWin::Up
+~LAlt::Down ; LAlt. Simply LAlt::Down won't work. SC038
 
 f::Left
 g::Right
 
-r:: pouch_up()        ; heal
-c:: pouch_down()      ; mana
-v:: pouch_right()     ; physick
+2:: pouch_up()        ; heal
+3:: pouch_down()      ; mana
+4:: pouch_right()     ; physick
 Tab:: pouch_left()    ; torrent
 
 ; f1:: pouch_five()     ; lantern
 ; f2:: pouch_six()      ; rainbow
 
-; UNUSED
-; 1:: two_hand_left()
-; 2:: two_hand_right()
+XButton1:: two_hand_left()
+XButton2:: two_hand_right()
 
 ; f3:: gesture_6()
 ; f4:: gesture_2()
@@ -165,12 +168,11 @@ Tab:: pouch_left()    ; torrent
 ; f7:: gesture_5()
 ; f8:: gesture_6()
 
-; AppsKey:: deal_with_notification()
 ; n:: quit_out()
 
 ; bring back lost c and v
-; <::c
-; >::v
+<::c
+>::v
 
 ; QUIT OUT SEQUENCE
 
