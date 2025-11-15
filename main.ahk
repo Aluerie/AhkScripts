@@ -12,14 +12,14 @@ ProcessSetPriority "AboveNormal"  ; "Realtime"
 SendMode "InputThenPlay"
 
 ; DEBUG
-; #include %A_ScriptDir%\debug\__init__.ahk         ; Debug Print for this script
+; #include %A_ScriptDir%\src\debug\__init__.ahk         ; Debug Print for this script
 
 ; GAMES
-#Include %A_ScriptDir%\games\dota2.ahk              ; Dota 2
-#Include %A_ScriptDir%\games\elden_ring.ahk         ; Elden Ring
-#include %A_ScriptDir%\games\sekiro.ahk             ; Sekiro
-#include %A_ScriptDir%\games\variety.ahk            ; Variety
+#Include %A_ScriptDir%\src\games\dota2.ahk              ; Dota 2
+#Include %A_ScriptDir%\src\games\elden_ring.ahk         ; Elden Ring
+#include %A_ScriptDir%\src\games\sekiro.ahk             ; Sekiro
+#include %A_ScriptDir%\src\games\variety.ahk            ; Variety
 
 ; WINDOWS
-#include %A_ScriptDir%\windows\general.ahk          ; Windows Daily Life
-; #include %A_ScriptDir%\windows\zapret.ahk         ; Zapret
+#include %A_ScriptDir%\src\windows\general.ahk          ; Windows Daily Life
+; #include %A_ScriptDir%\src\windows\zapret.ahk         ; Zapret

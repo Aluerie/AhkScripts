@@ -37,8 +37,10 @@ WheelUp:: {
 ; Since we rebind LWin above --- Win + Key keybinds won't work by default
 ; meaning we need to bring them back - maybe there is a better way but here is mine
 ; since i only use `Win Shift S` in dota then let's bring only it.
+; We are missing other variations, like "LShift -> S -> LWin", but I think I press those two in 99% cases;
 
-AppsKey & S:: {
+LWin & S:: {
+    ; LShift -> LWin -> S
     if Getkeystate("LShift", "p") {
         Run("ms-screenclip:")
     }
@@ -48,7 +50,8 @@ AppsKey & S:: {
 }
 
 LShift & S:: {
-    if Getkeystate("AppsKey", "p") {
+    ; LWin -> LShift -> S
+    if Getkeystate("LWin", "p") {
         Run("ms-screenclip:")
     }
     else {

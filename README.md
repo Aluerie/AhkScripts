@@ -15,7 +15,7 @@ Ahk Scripts make any desire in key-binds possible no matter how weird it is. You
 
 You need to generate `.exe` file with standard Ahk2exe procedure:
 
-* Install [AutoHotkey Version 2](https://www.autohotkey.com/) (Attention! Version 2).
+* Install [AutoHotkey Version 2](https://www.autohotkey.com/) (Attention! Version 2, my script is written with ahk2 syntax).
 * choose Compile option that will download/open Ahk2exe application.
 * Choose `main.ahk` from current repo as Source (script file).
 * Press "Convert"
@@ -26,5 +26,5 @@ You need to generate `.exe` file with standard Ahk2exe procedure:
 
 * Make a shortcut for `main.exe` generated in the previous section.
 * Put the shortcut into special Windows `Startup` folder:
-    * press `Win+R` and type `shell:startup` to reach there
+  * press `Win+R` and type `shell:startup` to reach there
 * Done! Now the script should be running even after PC restarts.
