@@ -33,44 +33,8 @@ WheelUp:: {
         Send "{WheelUp}"
 }
 
-; SECTION 4. FIX FOR WIN + SHIFT + S KEY COMBINATION
-; Since we rebind LWin above --- Win + Key keybinds won't work by default
-; meaning we need to bring them back - maybe there is a better way but here is mine
-; since i only use `Win Shift S` in dota then let's bring only it.
-; We are missing other variations, like "LShift -> S -> LWin", but I think I press those two in 99% cases;
-
-LWin & S:: {
-    ; LShift -> LWin -> S
-    if Getkeystate("LShift", "p") {
-        Run("ms-screenclip:")
-    }
-    else {
-        Send "{AppsKey} & {S}"
-    }
-}
-
-LShift & S:: {
-    ; LWin -> LShift -> S
-    if Getkeystate("LWin", "p") {
-        Run("ms-screenclip:")
-    }
-    else {
-        Send "{LShift} & {S}"
-    }
-}
-
-; SECTION 4. FOR AFK AFK IN SILT-BREAKER
-; PgUp:: {
-;     while (!GetKeyState("LButton")) {
-;         MouseMove 1180 + Random(0, 200), 620 + Random(0, 200)
-;         Send "{RButton}"
-;         Send "{End}"
-;         Sleep 4000
-;         Send "{F1}"
-;         Sleep 4000
-;         Send "{Space}"
-;         Sleep 4000
-;     }
-; }
+; SECTION 4. FIX FOR SCREENSHOT
+; "Ctrl + Shift + S" instead of "Win + Shift + S" because there are some memes with`LWin` combos when we do `LWin::AppsKey`
+^+s:: Run("ms-screenclip:")
 
 #HotIf

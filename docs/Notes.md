@@ -44,3 +44,31 @@ q::ESC  ; Correct.
 ```
 
 Honestly, I think Ahk2 is annoying/wrong about this design choice. If I wanted to change `Shift + Q` I would type `+Q::ESC` signifying my intentions with that `+` modifier. Maybe, there is something I don't know about, of course.
+
+## 5. Old Mistakes
+
+In past, we used this code to solve the screenshot problem in Dota 2.
+
+```ahk
+LWin & S:: {
+    ; LShift -> LWin -> S
+    if Getkeystate("LShift", "p") {
+        Run("ms-screenclip:")
+    }
+    else {
+        Send "{AppsKey} & {S}"
+    }
+}
+
+LShift & S:: {
+    ; LWin -> LShift -> S
+    if Getkeystate("LWin", "p") {
+        Run("ms-screenclip:")
+    }
+    else {
+        Send "{LShift} & {S}"
+    }
+}
+```
+
+However, I realized that it breaks `LWin::AppsKey` in a way that it no longer works in Dota, but we need it in the actual game, so therefore do not use the complex code above; find something simple, like `^+P::Run("ms-screenclip:")`
