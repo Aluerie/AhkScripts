@@ -13,4 +13,8 @@ CapsLock::SC029
 
 1::ESC
 
+#HotIf WinActive("ahk_exe Nioh3.exe")
+
+LWin::f8
+
 #HotIf

@@ -1,3 +1,8 @@
+/* Archive for ahk code snippets I've used before.
+
+Somewhat of a deprecation stash.
+*/
+
 #HotIf WinActive("ahk_exe dota2.exe")
 
 ; FOR AFK AFK IN SILT-BREAKER
@@ -29,5 +34,9 @@ q::Escape
 
 q::ESC
 x::i
+
+#HotIf WinActive("ahk_exe mpc-hc64.exe")
+
+End::Space
 
 #HotIf

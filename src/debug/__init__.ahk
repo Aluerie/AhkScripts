@@ -13,6 +13,8 @@ global g_DebugMessage
 g_DebugMessage := "MyVariable = " v_MyVariable "rofl"
 ```
 into the function you want to test
+
+PS. The concept might be outdated, I need to learn more ahk;
 */
 
 ; ATTENTION !!!
