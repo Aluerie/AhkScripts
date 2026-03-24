@@ -27,7 +27,7 @@ I rarely code with `.ahk` so here are some notes and reminders for future me.
 Probably, one of the most frequent mistakes/typos I do:
 
 ```ahk
-Q::ESC  ; Incorrect, it will only work for Shift+Q because it indeed interprets it as a capital "Q" 
+Q::ESC  ; Incorrect, it will only work for Shift+Q because it interprets capital "Q" like we mean "Shift+Q" 
 q::ESC  ; Correct.
 ```
 
@@ -57,4 +57,4 @@ LShift & S:: {
 }
 ```
 
-However, I realized that it breaks `LWin::AppsKey` in a way that it no longer works in Dota, but we need it in the actual game, so therefore do not use the complex code above; find something simple, like `^+P::Run("ms-screenclip:")`
+However, it breaks `LWin::AppsKey` in a way that it no longer works in Dota and other games, so therefore do not use the complex code above; find something simple, like `^+P::Run("ms-screenclip:")`

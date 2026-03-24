@@ -11,32 +11,29 @@ Features
 KEY_PRESS_DURATION := 30
 TIME_BETWEEN_KEYS := 23
 
-; Switch Armament - Settings.
+;  - Elden Ring In-game Key Bindings.
 ; Note: up/down/left/right correlate to HUD position and default "e"+press settings.
 UP_SWITCH_SORCERY_INCANTATION := "3"
 DOWN_SWITCH_ITEM := "4"
 LEFT_SWITCH_LEFT_HAND_ARM := "z"
 RIGHT_SWITCH_RIGHT_HAND_ARM := "x"
 
-; Attack - Settings
+; Elden Ring In-game Key Bindings: Attack section
 ATTACK_RH_2H := "LButton"
 GUARD_LH := "RButton"
-
-; Note: a lot of functions below depend on Event Action key being "e"
-; But we don't write it because we probably won't ever change it. It's just a bit easier.
-; EVENT_ACTION := "e"
+EVENT_ACTION := "e"
 
 ; SECTION 2. BASE FUNCTIONS
 
 event_action_combo(secondary_key) {
-    /* Press `e + secondary_key` combo.
+    /* Press `EVENT_ACTION + secondary_key` combo.
     
-    Used in Elden Ring for "e + something" keybinds like Pouch keys.
+    Used in Elden Ring for "EVENT_ACTION + something" keybinds like Pouch keys.
     */
-    if (!Getkeystate("e"))
-        Send "{e down}"
+    if (!Getkeystate(EVENT_ACTION))
+        Send "{" EVENT_ACTION " down}"
     press_key(secondary_key, 50)
-    Send "{e up}"
+    Send "{" EVENT_ACTION " up}"
 }
 
 press_key(key, duration := 0) {
@@ -134,24 +131,27 @@ quit_out() {
 ; SECTION 4. REMAPPING
 
 #HotIf WinActive("ahk_exe eldenring.exe")
+; Reminder / Warning
+; we need "~" before LAlt, Tab hotkey binds in order for AltTab to work properly
+; we need "~" before 2 so ER doesn't complain about overwriting menu keys
 
-Escape::SC045  ; Pause
-~LAlt::f
-CapsLock::r
-!e::g
+Escape::SC045           ; Pause
+~LAlt::f                ; Crouch
+CapsLock::r             ; Jump
 
-1::ESC
-2::Up
+1::ESC                  ; Extra key for Menu
+~2::Up                  ; Map and extra key for Quit Out when playing without any tools (1 2 E Z E F E)
+f::Left                 ; So we have an easy way to dismiss notifications like "Summon Torrent with Flask?" => "F E"
 
-f::Left
-
-r:: pouch_up()        ; heal
-c:: pouch_down()      ; mana
-v:: pouch_right()     ; physick
-Tab:: pouch_left()    ; torrent
+r:: pouch_up()          ; heal
+c:: pouch_down()        ; mana
+v:: pouch_right()       ; physick
+~Tab:: pouch_left()     ; torrent
 
 XButton1:: two_hand_left()
 XButton2:: two_hand_right()
 
+; TODO: REMOVE THIS AS IT DISABLES LWIN::APPSKEY IN DOTA 2 !!!
+<#Tab::AltTab           ; Give an alternative way to AltTab
 
 #HotIf

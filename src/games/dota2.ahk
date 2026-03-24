@@ -14,8 +14,8 @@ Esc::Numpad7
 
 ; SECTION 2. FIX FOR MINOR ISSUES
 Insert::ESC                     ; so we have ESC key for showcase, etc.
-NumpadEnter::Enter              ; For some reason it doesn't work in the same manner as normal Enter sometimes
-LWin::AppsKey  ; SC15B::AppsKey
+NumpadEnter::Enter              ; Allow `NumpadEnter` to be used in the same scenarios as normal `Enter`;
+LWin::AppsKey                   ;
 
 ; SECTION 3. TAUNT CD PROBLEM
 ; I want to use Taunt on WheelUp but Dota spams me with cooldown messages
