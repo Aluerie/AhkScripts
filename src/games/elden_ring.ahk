@@ -1,11 +1,3 @@
-/* Elden Ring
-
-Features
---------
-# TODO: Write features
-
-*/
-
 ; SECTION 1. MY PREFERENCES
 
 KEY_PRESS_DURATION := 30
@@ -21,7 +13,7 @@ RIGHT_SWITCH_RIGHT_HAND_ARM := "x"
 ; Elden Ring In-game Key Bindings: Attack section
 ATTACK_RH_2H := "LButton"
 GUARD_LH := "RButton"
-EVENT_ACTION := "e"
+EVENT_ACTION := "f"
 
 ; SECTION 2. BASE FUNCTIONS
 
@@ -141,7 +133,7 @@ CapsLock::r             ; Jump
 
 1::ESC                  ; Extra key for Menu
 ~2::Up                  ; Map and extra key for Quit Out when playing without any tools (1 2 E Z E F E)
-f::Left                 ; So we have an easy way to dismiss notifications like "Summon Torrent with Flask?" => "F E"
+~f::Left                 ; So we have an easy way to dismiss notifications like "Summon Torrent with Flask?" => "F E"
 
 r:: pouch_up()          ; heal
 c:: pouch_down()        ; mana

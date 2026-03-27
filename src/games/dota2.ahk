@@ -1,18 +1,10 @@
-/* Dota 2
-
-Features
---------
-# TODO: Write features
-
-*/
-
 #HotIf WinActive("ahk_exe dota2.exe")
 
 ; SECTION 1. NON-BINDABLE KEYS BY DEFAULT
 Esc::Numpad7
 !SC029::Numpad8                 ; Alt + (Grave Accent / Tilde)
 
-; SECTION 2. FIX FOR MINOR ISSUES
+; SECTION 2. FIX MINOR ISSUES
 Insert::ESC                     ; so we have ESC key for showcase, etc.
 NumpadEnter::Enter              ; Allow `NumpadEnter` to be used in the same scenarios as normal `Enter`;
 LWin::AppsKey                   ;
