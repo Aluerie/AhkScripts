@@ -20,9 +20,13 @@ I rarely code with `.ahk` so here are some notes and reminders for future me.
 
 ## 3. Common practices
 
-## 4. Common mistakes
+## 4. Other tips
 
-### 4.1. Do not use `Q::ESC` where `Q` is a Capital letter
+* Enumeration in AHK starts from 1 so `array[1]` fetches the first element (unlike other languages where it would be array[0])
+
+## 5. Common mistakes
+
+### 5.1. Do not use `Q::ESC` where `Q` is a Capital letter
 
 Probably, one of the most frequent mistakes/typos I do:
 
@@ -31,7 +35,7 @@ Q::ESC  ; Incorrect, it will only work for Shift+Q because it interprets capital
 q::ESC  ; Correct.
 ```
 
-## 5. Old Mistakes
+## 6. Old Mistakes
 
 In past, we used this code to solve the screenshot problem in Dota 2.
 

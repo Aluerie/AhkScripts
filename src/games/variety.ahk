@@ -6,8 +6,8 @@ SC029::1
 
 #HotIf WinActive("ahk_exe Hollow Knight Silksong.exe")
 
-SC029::ESC
 CapsLock::SC029
+r::ESC
 
 #HotIf WinActive("ahk_exe Hollow Knight.exe")
 
