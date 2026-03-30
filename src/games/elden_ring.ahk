@@ -13,7 +13,7 @@ RIGHT_SWITCH_RIGHT_HAND_ARM := "x"
 ; Elden Ring In-game Key Bindings: Attack section
 ATTACK_RH_2H := "LButton"
 GUARD_LH := "RButton"
-EVENT_ACTION := "f"
+EVENT_ACTION := "e"
 
 ; SECTION 2. BASE FUNCTIONS
 
@@ -120,6 +120,10 @@ quit_out() {
     BlockInput false
 }
 
+open_equipment() {
+    press_sequence(["escape", "e"])
+}
+
 ; SECTION 4. REMAPPING
 
 #HotIf WinActive("ahk_exe eldenring.exe")
@@ -131,9 +135,10 @@ Escape::SC045           ; Pause
 ~LAlt::f                ; Crouch
 CapsLock::r             ; Jump
 
-1::ESC                  ; Extra key for Menu
-~2::Up                  ; Map and extra key for Quit Out when playing without any tools (1 2 E Z E F E)
-~f::Left                 ; So we have an easy way to dismiss notifications like "Summon Torrent with Flask?" => "F E"
+SC029::ESC              ; Extra key for Menu
+1::open_equipment()     ; Extra key for Equipment
+f::e                    ; I want menu interact keys to be F as well
+e::Left                 ; So we have an easy way to dismiss notifications like "Summon Torrent with Flask?" => "E F"
 
 r:: pouch_up()          ; heal
 c:: pouch_down()        ; mana
@@ -143,7 +148,19 @@ v:: pouch_right()       ; physick
 XButton1:: two_hand_left()
 XButton2:: two_hand_right()
 
+; ~2::Up                  ; Extra key for Up (useful for quit out)
+; ~3::Down                ; Extra key for Down
+
 ; TODO: REMOVE THIS AS IT DISABLES LWIN::APPSKEY IN DOTA 2 !!!
 <#Tab::AltTab           ; Give an alternative way to AltTab
+
+LCtrl::pouch_five()
+
+o::gesture_1()
+p::gesture_2()
+k::gesture_3()
+l::gesture_4()
+m::gesture_5()
+,::gesture_6()
 
 #HotIf
