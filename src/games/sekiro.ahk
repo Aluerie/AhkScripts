@@ -1,8 +1,10 @@
 #HotIf WinActive("ahk_exe sekiro.exe")
 
+ESC::SC045
 1::ESC
 2::Z
 3::Left
+c::End
 
 F5:: {
     /* Open the latest file in RECORDINGS\REPLAYS folder to observe in LosslessCut.

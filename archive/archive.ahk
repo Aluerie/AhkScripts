@@ -19,8 +19,4 @@ q::Escape
 q::ESC
 x::i
 
-#HotIf WinActive("ahk_exe mpc-hc64.exe")
-
-End::Space
-
 #HotIf

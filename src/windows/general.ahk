@@ -15,6 +15,9 @@ CapsLock::Home
 ; Just give me another Alt+Tab :D
 ; However doing this blocks us from overwriting LWin in games like `LWin::F8` stops working - so don't uncomment this.
 ; <#Tab::AltTab
+#HotIf WinActive("ahk_exe mpc-hc64.exe")
+
+End::Space
 
 #HotIf WinActive("ahk_exe vlc.exe")
 
