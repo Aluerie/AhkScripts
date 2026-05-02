@@ -1,20 +1,21 @@
 #HotIf WinActive("ahk_exe dota2.exe")
 
-; SECTION 1. NON-BINDABLE KEYS BY DEFAULT
+; NON-BINDABLE KEYS BY DEFAULT
 Esc::Numpad7
 !SC029::Numpad8                 ; Alt + (Grave Accent / Tilde)
 
-; SECTION 2. FIX MINOR ISSUES
-Insert::ESC                     ; so we have ESC key for showcase, etc.
-NumpadEnter::Enter              ; Allow `NumpadEnter` to be used in the same scenarios as normal `Enter`;
-LWin::AppsKey                   ;
+; FIX MINOR ISSUES
+~NumpadDiv::ESC                     ; so we have ESC key for showcase, etc.
+NumpadEnter::Enter              ; Allow `NumpadEnter` to be used in the same scenarios as normal `Enter`
+LWin::AppsKey
 
-; SECTION 3. TAUNT CD PROBLEM
-; I want to use Taunt on WheelUp but Dota spams me with cooldown messages
-; So let's do some rate limiting
 global StartTime := 0
 
 WheelUp:: {
+    /*
+    I want to use Taunt on WheelUp but Dota spams me with cooldown messages
+    So let's do some rate limiting
+    */
     global StartTime
     if (A_TickCount - StartTime > 2000) {
         StartTime := A_TickCount

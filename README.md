@@ -1,29 +1,8 @@
 # 🗡️ AhkScripts
 
-My personal collection of Ahk2 Scripts.  
+My personal collection of AHK2 Scripts.  These scripts create shortcuts, key bindings and macros that I use in games and in my daily life.
 
-## 💌 What are these AutoHotKey Scripts ?
+> [!IMPORTANT]
+> I really like GitHub wikis format so I put some information in here: [🏠 Wiki](https://github.com/Aluerie/AhkScripts/wiki) instead of packing it all in the `README.md`. Including:
 
-Ahk Scripts make any desire in key-binds possible no matter how weird it is. You can overcome any keybind-design problems that developers leave out in their games. I.e.:
-
-* rebind "Win", "CapsLock" for gaming only without any heavy software;
-* Dota 2: "Alt+`" just doesn't work for some Source 2 reason;
-* Elden Ring: kbm controls are just not streamlined well;
-* much more, my desired quirks are in this repo.
-
-## 🛠️ Installing
-
-You need to generate `.exe` file with standard Ahk2exe procedure:
-
-* Install [AutoHotkey Version 2](https://www.autohotkey.com/) (Attention! Version 2, my script is written with ahk2 syntax).
-* choose Compile option that will download/open Ahk2exe application.
-* Choose `main.ahk` from current repo as Source (script file).
-* Press "Convert"
-* It will generate `main.exe` file which you can just run for keybinds to work
-* Now if you want the `.exe` to work persistent through Windows reboots follow the section below
-
-## 🔃 Making scripts work persistently through Windows reboots
-
-* Make a shortcut for `main.exe` generated in the previous section;
-* Put the shortcut into special Windows `Startup` folder (press `Win+R` and type `shell:startup` to reach there);
-* Done! Now the script should be running on every PC restart.
+* [🛠️ Installation Guide](https://github.com/Aluerie/AluBot/wiki/🛠️-Installation-Guide)

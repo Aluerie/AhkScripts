@@ -11,14 +11,14 @@ ListLines False
 ProcessSetPriority "AboveNormal"  ; "Realtime"
 SendMode "InputThenPlay"
 
-; DEBUG
-; #include %A_ScriptDir%\src\debug\__init__.ahk         ; Debug Print for this script
+; DEBUG PRINTS
+; #include %A_ScriptDir%\src\debug\__init__.ahk
 
 ; GAMES
-#Include %A_ScriptDir%\src\games\dota2.ahk              ; Dota 2
-#Include %A_ScriptDir%\src\games\elden_ring.ahk         ; Elden Ring
-#include %A_ScriptDir%\src\games\sekiro.ahk             ; Sekiro
-#include %A_ScriptDir%\src\games\variety.ahk            ; Variety
+#Include %A_ScriptDir%\src\games\dota2.ahk
+#Include %A_ScriptDir%\src\games\elden_ring.ahk
+#include %A_ScriptDir%\src\games\sekiro.ahk
+#include %A_ScriptDir%\src\games\variety.ahk
 
 ; WINDOWS
-#include %A_ScriptDir%\src\windows\general.ahk          ; Windows Daily Life
+#include %A_ScriptDir%\src\windows\general.ahk

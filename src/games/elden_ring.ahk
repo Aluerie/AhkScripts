@@ -1,179 +1,199 @@
 ; SECTION 1. MY PREFERENCES
 
-KEY_PRESS_DURATION := 30
-TIME_BETWEEN_KEYS := 23
+; Elden Ring In-game Key Bindings.
+PouchUp_SwitchSorceryIncantation := "4"
+PouchDown_SwitchItem := "8"
+PouchLeft_SwitchLeftHandArm := "Up"
+PouchRight_SwitchRightHandArm := "x"
 
-;  - Elden Ring In-game Key Bindings.
-; Note: up/down/left/right correlate to HUD position and default "e"+press settings.
-UP_SWITCH_SORCERY_INCANTATION := "3"
-DOWN_SWITCH_ITEM := "4"
-LEFT_SWITCH_LEFT_HAND_ARM := "z"
-RIGHT_SWITCH_RIGHT_HAND_ARM := "x"
+AttackRightHandTwoHand := "LButton"
+GuardLeftHand := "RButton"
+EventAction := "e"
 
-; Elden Ring In-game Key Bindings: Attack section
-ATTACK_RH_2H := "LButton"
-GUARD_LH := "RButton"
-EVENT_ACTION := "e"
+MapButton := "3"
 
 ; SECTION 2. BASE FUNCTIONS
 
-event_action_combo(secondary_key) {
+EventActionCombo(SecondaryKey) {
     /* Press `EVENT_ACTION + secondary_key` combo.
     
     Used in Elden Ring for "EVENT_ACTION + something" keybinds like Pouch keys.
     */
-    if (!Getkeystate(EVENT_ACTION))
-        Send "{" EVENT_ACTION " down}"
-    press_key(secondary_key, 50)
-    Send "{" EVENT_ACTION " up}"
+    if (!Getkeystate(EventAction))
+        Send "{" EventAction " down}"
+    PressKey(SecondaryKey, 50)
+    Send "{" EventAction " up}"
 }
 
-press_key(key, duration := 0) {
-    /* Holds down a key for a specified duration or KEY_PRESS_DURATION before releasing it.
+PressKey(Key, Duration := 0) {
+    /* Holds down a key for a specified duration before releasing it.
     
     It seems Elden Ring and some other games do not recognize normal ways of sending a key, i.e. simply `Send`.
     But separate `key down` and `key up` events do work.
     */
-    Send "{" key " down}"
-    Sleep duration ? duration : KEY_PRESS_DURATION
-    Send "{" key " up}"
+    Send "{" Key " down}"
+    Sleep Duration ? Duration : 30
+    Send "{" Key " up}"
 }
 
-press_sequence(sequence, time_between_presses := 0) {
+PressSequence(sequence, time_between_presses := 0) {
     /* Press sequence of keys.
     
     */
     for index, value in sequence {
-        press_key(value)
-        Sleep time_between_presses ? time_between_presses : TIME_BETWEEN_KEYS
+        PressKey(value)
+        Sleep time_between_presses ? time_between_presses : 23
     }
 }
 
 ; SECTION 3. UTILITY FUNCTIONS
 
-two_hand_left() {
-    event_action_combo(GUARD_LH)
+TwoHandLeft() {
+    EventActionCombo(GuardLeftHand)
 }
 
-two_hand_right() {
-    event_action_combo(ATTACK_RH_2H)
+TwoHandRight() {
+    EventActionCombo(AttackRightHandTwoHand)
 }
 
-pouch_up() {
-    event_action_combo(UP_SWITCH_SORCERY_INCANTATION)
+PouchUp() {
+    EventActionCombo(PouchUp_SwitchSorceryIncantation)
 }
 
-pouch_down() {
-    event_action_combo(DOWN_SWITCH_ITEM)
+PouchDown() {
+    EventActionCombo(PouchDown_SwitchItem)
 }
 
-pouch_left() {
-    event_action_combo(LEFT_SWITCH_LEFT_HAND_ARM)
+PouchLeft() {
+    EventActionCombo(PouchLeft_SwitchLeftHandArm)
 }
 
-pouch_right() {
-    event_action_combo(RIGHT_SWITCH_RIGHT_HAND_ARM)
+PouchRight() {
+    EventActionCombo(PouchRight_SwitchRightHandArm)
 }
 
-pouch_five() {
+PouchFive() {
     ; double e only cause it can glitch
-    press_sequence(["escape", "right", "down", "down", "e", "e", "escape"])
+    PressSequence(["escape", "right", "down", "down", "e", "e", "escape"])
 }
 
-pouch_six() {
-    press_sequence(["escape", "left", "down", "down", "e", "e", "escape"])
+PouchSix() {
+    PressSequence(["escape", "left", "down", "down", "e", "e", "escape"])
 }
 
-gesture_1() {
-    press_sequence(["escape", "up", "right", "up", "up", "e", "escape"])
+Gesture1() {
+    PressSequence(["escape", "up", "right", "up", "up", "e", "escape"])
 }
 
-gesture_2() {
-    press_sequence(["escape", "up", "left", "up", "up", "e", "escape"])
+Gesture2() {
+    PressSequence(["escape", "up", "left", "up", "up", "e", "escape"])
 }
 
-gesture_3() {
-    press_sequence(["escape", "up", "right", "up", "e", "escape"])
+Gesture3() {
+    PressSequence(["escape", "up", "right", "up", "e", "escape"])
 }
 
-gesture_4() {
-    press_sequence(["escape", "up", "left", "up", "e", "escape"])
+Gesture4() {
+    PressSequence(["escape", "up", "left", "up", "e", "escape"])
 }
 
-gesture_5() {
-    press_sequence(["escape", "up", "right", "e", "escape"])
+Gesture5() {
+    PressSequence(["escape", "up", "right", "e", "escape"])
 }
 
-gesture_6() {
-    press_sequence(["escape", "up", "left", "e", "escape"])
+Gesture6() {
+    PressSequence(["escape", "up", "left", "e", "escape"])
 }
 
-deal_with_notification() {
-    Send "{left down}"
-    Sleep TIME_BETWEEN_KEYS
-    Send "{e down}"
-    Sleep TIME_BETWEEN_KEYS
-    Send "{e up}{left up}"
-}
-
-quit_out() {
+QuitOut() {
     BlockInput true
-    press_sequence(["escape", "up", "e"], 50)
+    PressSequence(["escape", "up", "e"], 50)
     Sleep 110
-    press_sequence(["z", "e", "left", "e", "e", "e"], 50)
+    PressSequence(["z", "e", "left", "e", "e", "e", "e"], 50)
     BlockInput false
 }
 
-open_equipment() {
-    press_sequence(["escape", "e"])
+OpenEquipment() {
+    PressSequence(["escape", "e"])
 }
 
-pause_trick() {
-    press_sequence(["escape", "e", "2", "down", "e"])
+OpenCrafting() {
+    PressSequence(["escape", "down", "e"])
+}
+
+OpenInventory() {
+    PressSequence(["escape", "down", "down", "e"])
+}
+
+OpenSystem() {
+    PressSequence(["escape", "up", "e"])
+}
+
+PauseTrick() {
+    PressSequence(["escape", "e", MapButton, "down", "e"])
 }
 
 ; SECTION 4. REMAPPING
 
 #HotIf WinActive("ahk_exe eldenring.exe")
-; Reminder / Warning
-; we need "~" before LAlt, Tab hotkey binds in order for AltTab to work properly
-; we need "~" before 2 so ER doesn't complain about overwriting menu keys
 
-~LAlt::f                ; Crouch
-CapsLock::r             ; Jump
+~Alt::f  ; Crouch
+CapsLock::r  ; Jump
+Shift::z  ; Ash of War + Menu LT
+z::Up  ; Rebind so it doesn't get lost
+f17::Left  ; Strong Attack + Menu RT
+~SC029::y  ; A better key for sort
+f::9
 
-SC029::ESC              ; Extra key for Menu
-1:: open_equipment()     ; Extra key for Equipment
-f::e                    ; I want menu interact keys to be F as well
-e::Left                 ; So we have an easy way to dismiss notifications like "Summon Torrent with Flask?" => "E F"
+1:: OpenEquipment()
+2:: OpenInventory()
+4:: OpenCrafting()
+g:: OpenSystem()
 
-t::F5                   ; So we can bind it in the practice tool without losing access to "T: Sort"
-f5::t                   ; New key to "T: Sort" menu feature
+t::F5  ; So we can bind it in the practice tool without losing access to "T: Sort"
+f5::t  ; New key to "T: Sort" menu feature
 
-r:: pouch_up()          ; heal
-c:: pouch_down()        ; mana
-v:: pouch_right()       ; physick
-~Tab:: pouch_left()     ; torrent
+r:: PouchUp()  ; heal
+c:: PouchDown()  ; mana
+v:: PouchRight()  ; physick
+~Tab:: PouchLeft()  ; torrent
 
-XButton1:: two_hand_left()
-XButton2:: two_hand_right()
+Ins:: TwoHandLeft()  ; Mouse 4
+ScrollLock:: TwoHandRight()  ; Mouse 5
 
-~2::Up                  ; Extra key for Up (useful for quit out)
-~3::Down                ; Extra key for Down
-~4::Right               ; Extra key for Right
+; ESC:: PouchFive()
 
-; TODO: REMOVE THIS AS IT DISABLES LWIN::APPSKEY IN DOTA 2 !!!
-<#Tab::AltTab           ; Give an alternative way to AltTab
+; i:: Gesture1()
+; o:: Gesture2()
+; j:: Gesture3()
+; k:: Gesture4()
+; n:: Gesture5()
+; m:: Gesture6()
 
-ESC:: pouch_five()
+f4:: PauseTrick()
+; o:: PouchFive()
+; u:: QuitOut()
 
-o:: gesture_1()
-p:: gesture_2()
-k:: gesture_3()
-l:: gesture_4()
-m:: gesture_5()
-,:: gesture_6()
+; Arrow key for shopping
 
-f4:: pause_trick()
+Ins::z
+PgUp::x
+Delete::Left
+End::Down
+PgDn::Right
+Home::Up
+
+; Arrow keys for map warp
+Left::z
+Right::x
+^s:: Run("ms-screenclip:")
+
+; Scroll keys
+,::c
+.::v
+
+#SuspendExempt
+f9:: Suspend -1
+#SuspendExempt False
 
 #HotIf
