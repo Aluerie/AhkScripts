@@ -1,6 +1,10 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 
+; With my keyboard just holding down two reassigned keys trigger the warning with the default value (70)
+; So let's go higher
+A_MaxHotkeysPerInterval := 200 ;
+
 ; COMMENT FIRST 2 AND UNCOMMENT OTHER 3 lines TO SEE THE KEY HISTORY WINDOW
 KeyHistory 0
 ListLines False

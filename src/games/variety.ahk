@@ -16,5 +16,10 @@ r::ESC
 #HotIf WinActive("ahk_exe Nioh3.exe")
 
 LWin::f8
+; ; - !Tab::Return
+; <#Tab::AltTab
+#HotIf WinActive("ahk_exe SB-Win64-Shipping.exe")
+
+SC029::Esc
 
 #HotIf

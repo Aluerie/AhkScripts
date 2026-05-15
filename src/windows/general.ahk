@@ -14,7 +14,7 @@ f17::End  ; Mouse 6
 ; <#Tab::AltTab
 
 ; TODO: REMOVE THIS AS IT DISABLES LWIN::KEY BINDS
-<#Tab::AltTab
+; <#Tab::AltTab
 
 #HotIf WinActive("ahk_exe mpc-hc64.exe")
 

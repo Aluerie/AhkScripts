@@ -8,7 +8,16 @@ AHK_ER_EXE := "ahk_exe eldenring.exe"
 
 Run('conhost.exe --headless me3.exe launch -p eldenring-default')
 Sleep 2000
-Run("C:\_GAMES\Elden Ring Helpers\TarnishedTool.exe")
+
+for index, app in [
+    "C:\_GAMES\Elden Ring Helpers\TarnishedTool.exe"
+    "C:\_GAMES\_Gamer Apps\SoulsSpeedruns-Save-Organizer-1.6-windows-bundled\SoulsSpeedruns - Save Organizer - Bundled.exe",
+    ; "C:\_GAMES\_Gamer Apps\AutoHitCounter\AutoHitCounter.exe",
+    ; "C:\_GAMES\_Gamer Apps\Transparent_LiveSplit_Build\LiveSplit.exe",
+] {
+    Run(app)
+    Sleep 2000
+}
 
 ; Try to fix ER Cursor unlock issue
 ; it doesn't work well
@@ -34,6 +43,7 @@ ClipCursorToWindow(WindowTitle) {
 WinWaitClose(AHK_ER_EXE)
 for index, window in [
     "TarnishedTool",
+    "javaw", ; it's Save Organizer
 ]
     ahk_exe := "ahk_exe " window ".exe"
 if WinExist(ahk_exe) {

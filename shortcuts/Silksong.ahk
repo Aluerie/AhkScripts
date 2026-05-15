@@ -2,10 +2,10 @@
 
 TraySetIcon("C:\_GAMES\Silksong\Hollow Knight Silksong.exe")
 
-if A_Args[1] = "--modded" {
+if A_Args.Length > 0 AND A_Args[1] = "--modded" {
     ; Modded (you can edit the profile with CogFly)
     Run(
-        "`"C:\_GAMES\Silksong\Hollow Knight Silksong.exe`"  "
+        "`"C:\_GAMES\Silksong\Hollow Knight Silksong.exe`" "
         "--doorstop-enabled true "
         "--doorstop-target-assembly C:\Users\Me\AppData\Roaming\Cogfly\profiles\Default\BepInEx\core\BepInEx.Preloader.dll"
     )
@@ -13,8 +13,8 @@ if A_Args[1] = "--modded" {
 else {
     ; Vanilla
     Run(
-        "`"C:\_GAMES\Silksong\Hollow Knight Silksong.exe`"  "
-        "--doorstop-enabled false "
+        "`"C:\_GAMES\Silksong\Hollow Knight Silksong.exe`" "
+        "--doorstop-enabled false"
     )
 }
 
