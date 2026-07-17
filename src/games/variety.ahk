@@ -18,8 +18,16 @@ r::ESC
 LWin::f8
 ; ; - !Tab::Return
 ; <#Tab::AltTab
-#HotIf WinActive("ahk_exe SB-Win64-Shipping.exe")
 
-SC029::Esc
+; STELLAR BLADE
+; #HotIf NOT WinActive("ahk_exe SB-Win64-Shipping.exe")
+
+; RCtrl::e
+
+; #HotIf WinActive("ahk_exe SB-Win64-Shipping.exe")
+
+; ~RCtrl::e
+; 1::Esc
+; ~2::1
 
 #HotIf

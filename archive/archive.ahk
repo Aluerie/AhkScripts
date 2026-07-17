@@ -19,4 +19,12 @@ q::Escape
 q::ESC
 x::i
 
+#HotIf WinActive("ahk_exe mpc-hc64.exe")
+
+f17::Space
+
+#HotIf WinActive("ahk_exe vlc.exe")
+
+f17::Space
+
 #HotIf

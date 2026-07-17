@@ -1,4 +1,6 @@
 .wiki
 *.exe
 experiments.ahk
+experiment.ahk
 draft.ahk
+desktop.ini

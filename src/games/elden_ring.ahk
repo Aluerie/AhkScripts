@@ -4,7 +4,7 @@
 PouchUp_SwitchSorceryIncantation := "4"
 PouchDown_SwitchItem := "8"
 PouchLeft_SwitchLeftHandArm := "Up"
-PouchRight_SwitchRightHandArm := "x"
+PouchRight_SwitchRightHandArm := "Down"
 
 AttackRightHandTwoHand := "LButton"
 GuardLeftHand := "RButton"
@@ -140,15 +140,16 @@ PauseTrick() {
 ~Alt::f  ; Crouch
 CapsLock::r  ; Jump
 Shift::z  ; Ash of War + Menu LT
+~SC029::y  ; A better key for Detailed View toggle
+
+f::x  ; Item Usage - Menu RT
 z::Up  ; Rebind so it doesn't get lost
-f17::Left  ; Strong Attack + Menu RT
-~SC029::y  ; A better key for sort
-f::9
+x::Down  ; Rebind so it doesn't get lost
 
 1:: OpenEquipment()
 2:: OpenInventory()
 4:: OpenCrafting()
-g:: OpenSystem()
+; g:: OpenSystem()
 
 t::F5  ; So we can bind it in the practice tool without losing access to "T: Sort"
 f5::t  ; New key to "T: Sort" menu feature
@@ -158,13 +159,13 @@ c:: PouchDown()  ; mana
 v:: PouchRight()  ; physick
 ~Tab:: PouchLeft()  ; torrent
 
-Ins:: TwoHandLeft()  ; Mouse 4
-ScrollLock:: TwoHandRight()  ; Mouse 5
+XButton1:: TwoHandLeft()  ; Mouse 4
+XButton2:: TwoHandRight()  ; Mouse 5
 
-; ESC:: PouchFive()
+f1:: PouchFive()
 
 ; i:: Gesture1()
-; o:: Gesture2()
+f2:: Gesture6()
 ; j:: Gesture3()
 ; k:: Gesture4()
 ; n:: Gesture5()
@@ -174,18 +175,6 @@ f4:: PauseTrick()
 ; o:: PouchFive()
 ; u:: QuitOut()
 
-; Arrow key for shopping
-
-Ins::z
-PgUp::x
-Delete::Left
-End::Down
-PgDn::Right
-Home::Up
-
-; Arrow keys for map warp
-Left::z
-Right::x
 ^s:: Run("ms-screenclip:")
 
 ; Scroll keys
@@ -196,4 +185,9 @@ Right::x
 f9:: Suspend -1
 #SuspendExempt False
 
+; Space:: {
+;     PressKey("f")
+; }
+
+; TODO: We wanted to make NumPad keys to be our shop-menuing arrow keys so they have all the needed keys nearby;
 #HotIf
