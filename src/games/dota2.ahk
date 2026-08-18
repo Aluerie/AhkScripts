@@ -11,7 +11,7 @@ LWin::AppsKey
 
 global StartTime := 0
 
-WheelUp:: {
+~WheelUp:: {
     /*
     I want to use Taunt on WheelUp but Dota spams me with cooldown messages
     So let's do some rate limiting
@@ -20,10 +20,7 @@ WheelUp:: {
     if (A_TickCount - StartTime > 2000) {
         StartTime := A_TickCount
         Send "{PgUp}"
-        Send "{WheelUp}"
     }
-    else
-        Send "{WheelUp}"
 }
 
 ; SECTION 4. FIX FOR SCREENSHOT

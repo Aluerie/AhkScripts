@@ -2,12 +2,13 @@
 
 ; ESC::SC045
 1::ESC
-2::Z
+2::z
+3::v
 z::Left
 
 ; F5:: {
 ;     /* Open the latest file in RECORDINGS\REPLAYS folder to observe in LosslessCut.
-    
+
 ;     LosslessCut has nice features for viewing videos frame by frame.
 ;     */
 

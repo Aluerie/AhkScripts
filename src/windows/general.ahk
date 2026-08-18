@@ -21,4 +21,7 @@
 ; TODO: REMOVE THIS AS IT DISABLES LWin::KEY BINDS
 ; <#Tab::AltTab
 
+; J:: {
+;     Click "1400 766 1"
+; }
 #HotIf

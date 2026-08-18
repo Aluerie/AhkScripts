@@ -53,7 +53,12 @@ TwoHandLeft() {
 }
 
 TwoHandRight() {
-    EventActionCombo(AttackRightHandTwoHand)
+    ; EventActionCombo(AttackRightHandTwoHand)
+    ;
+    ; This is TwoHanding via Strong Attack key
+    ; It has an interesting advantage of being able to 2-hand a weapon in scenarios where
+    ; Left Click (Light Attack) would trigger Riposte/Back-stab.
+    EventActionCombo("Left")
 }
 
 PouchUp() {
@@ -138,9 +143,19 @@ PauseTrick() {
 #HotIf WinActive("ahk_exe eldenring.exe")
 
 ~Alt::f  ; Crouch
-CapsLock::r  ; Jump
+Home::r  ; Jump
 Shift::z  ; Ash of War + Menu LT
 ~SC029::y  ; A better key for Detailed View toggle
+
+; f13::Up
+; Delete::Left
+; End::Down
+; PgDn::Right
+
+Numpad5::Up
+Numpad2::Down
+Numpad1::z
+Numpad3::x
 
 f::x  ; Item Usage - Menu RT
 z::Up  ; Rebind so it doesn't get lost
@@ -177,17 +192,9 @@ f4:: PauseTrick()
 
 ^s:: Run("ms-screenclip:")
 
-; Scroll keys
-,::c
-.::v
-
 #SuspendExempt
-f9:: Suspend -1
+Pause:: Suspend -1
 #SuspendExempt False
-
-; Space:: {
-;     PressKey("f")
-; }
 
 ; TODO: We wanted to make NumPad keys to be our shop-menuing arrow keys so they have all the needed keys nearby;
 #HotIf
