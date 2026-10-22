@@ -12,7 +12,7 @@ Sleep 2000
 for index, app in [
     "C:\_GAMES\Elden Ring Helpers\TarnishedTool.exe",
     "C:\_GAMES\_Gamer Apps\SoulsSpeedruns-Save-Organizer-1.6-windows-bundled\SoulsSpeedruns - Save Organizer - Bundled.exe",
-    ; "C:\_GAMES\_Gamer Apps\AutoHitCounter\AutoHitCounter.exe",
+    "C:\_GAMES\_Gamer Apps\AutoHitCounter\AutoHitCounter.exe",
     ; "C:\_GAMES\_Gamer Apps\Transparent_LiveSplit_Build\LiveSplit.exe",
 ] {
     Run(app)
@@ -42,6 +42,8 @@ ClipCursorToWindow(WindowTitle) {
 
 WinWaitClose(AHK_ER_EXE)
 for index, window in [
+    "LiveSplit",
+    "AutoHitCounter",
     "TarnishedTool",
     "javaw", ; it's Save Organizer
 ] {

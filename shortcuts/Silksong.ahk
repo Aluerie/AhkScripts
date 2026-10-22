@@ -3,15 +3,30 @@
 TraySetIcon("C:\_GAMES\Silksong\Hollow Knight Silksong.exe")
 
 if A_Args.Length > 0 AND A_Args[1] = "--modded" {
-    ; Modded (you can edit the profile with CogFly)
+    ; Modded (you can edit the SpeedGym profile with CogFly)
     Run(
         "`"C:\_GAMES\Silksong\Hollow Knight Silksong.exe`" "
         "--doorstop-enabled true "
-        "--doorstop-target-assembly C:\Users\Me\AppData\Roaming\Cogfly\profiles\Default\BepInEx\core\BepInEx.Preloader.dll"
+        "--doorstop-target-assembly C:\Users\Me\AppData\Roaming\Cogfly\profiles\SpeedGym\BepInEx\core\BepInEx.Preloader.dll"
+    )
+}
+else if A_Args.Length > 0 AND A_Args[1] = "--release" {
+    ; Release Modded (you can edit the SpeedGym profile with CogFly)
+    Run(
+        "`"C:\_GAMES\Silksong 28324\Hollow Knight Silksong.exe`" "
+        "--doorstop-enabled true "
+        "--doorstop-target-assembly C:\Users\Me\AppData\Roaming\Cogfly\profiles\SpeedGym\BepInEx\core\BepInEx.Preloader.dll"
+    )
+}
+else if A_Args.Length > 0 AND A_Args[1] = "--vanilla-release" {
+    ; Vanilla Release
+    Run(
+        "`"C:\_GAMES\Silksong 28324\Hollow Knight Silksong.exe`" "
+        "--doorstop-enabled false"
     )
 }
 else {
-    ; Vanilla
+    ; Vanilla Latest
     Run(
         "`"C:\_GAMES\Silksong\Hollow Knight Silksong.exe`" "
         "--doorstop-enabled false"

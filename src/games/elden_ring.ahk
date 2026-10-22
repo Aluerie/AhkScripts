@@ -144,7 +144,7 @@ PauseTrick() {
 
 ~Alt::f  ; Crouch
 Home::r  ; Jump
-Shift::z  ; Ash of War + Menu LT
+LShift::z  ; Ash of War + Menu LT
 ~SC029::y  ; A better key for Detailed View toggle
 
 ; f13::Up

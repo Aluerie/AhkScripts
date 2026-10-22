@@ -27,13 +27,14 @@ for index, app in [
     "C:\_GAMES\_Gamer Apps\AutoHitCounter\AutoHitCounter.exe",
     "C:\_GAMES\Sekiro Helpers\SekiroTool.exe",
     "C:\_GAMES\_Gamer Apps\SoulsSpeedruns-Save-Organizer-1.6-windows-bundled\SoulsSpeedruns - Save Organizer - Bundled.exe",
-    "C:\_GAMES\_Gamer Apps\Transparent_LiveSplit_Build\LiveSplit.exe",
+    ; "C:\_GAMES\_Gamer Apps\Transparent_LiveSplit_Build\LiveSplit.exe",
 ] {
     Run(app)
     Sleep 2000
 }
 
 ; STEP 5. Close FPS Unlocker
+Sleep 2000
 WinClose("ahk_exe SekiroFpsUnlockAndMore_v1.2.5.2.exe")
 
 ; STEP 6. Close helper apps when we close Sekiro

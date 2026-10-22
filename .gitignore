@@ -1,4 +1,6 @@
 .wiki
+AhkScripts.wiki
+
 *.exe
 experiments.ahk
 experiment.ahk
