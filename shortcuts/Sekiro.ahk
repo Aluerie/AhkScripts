@@ -9,6 +9,8 @@ TraySetIcon("C:\_GAMES\Sekiro - Shadows Die Twice\2.ico")
 ; Run('powershell.exe Start-Process -FilePath "C:\Users\Me\AppData\Local\garyttierney\me3\config\profiles\sekiro-default.me3" -WindowStyle hidden')
 Run('conhost.exe --headless me3.exe launch -p sekiro-default --no-mem-patch')
 ; Run("C:\_GAMES\Sekiro - Shadows Die Twice\sekiro.exe", "C:\_GAMES\Sekiro - Shadows Die Twice") ; (Mod Engine 1)
+if !WinWait("ahk_exe sekiro.exe", , 120)
+    ExitApp
 Sleep 2000
 
 ; STEP 2. Set true border-less window style
@@ -35,7 +37,8 @@ for index, app in [
 
 ; STEP 5. Close FPS Unlocker
 Sleep 2000
-WinClose("ahk_exe SekiroFpsUnlockAndMore_v1.2.5.2.exe")
+if WinExist("ahk_exe SekiroFpsUnlockAndMore_v1.2.5.2.exe")
+    WinClose("ahk_exe SekiroFpsUnlockAndMore_v1.2.5.2.exe")
 
 ; STEP 6. Close helper apps when we close Sekiro
 WinWaitClose("ahk_exe sekiro.exe")

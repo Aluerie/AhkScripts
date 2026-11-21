@@ -22,22 +22,28 @@ for index, app in [
 ; Try to fix ER Cursor unlock issue
 ; it doesn't work well
 
+; Make sure the game window exists before watching it / waiting for it to close
+if !WinWait(AHK_ER_EXE, , 120)
+    ExitApp
+
 SetTimer(WatchEldenRing, 1000) ; Every 1 second is probably enough ;
 WatchEldenRing(*) {
     if WinExist(AHK_ER_EXE)
         if WinActive(AHK_ER_EXE)
             ClipCursorToWindow(AHK_ER_EXE)
         else
-            DllCall("ClipCursor", "UInt", 0)
-    else
+            DllCall("ClipCursor", "Ptr", 0)
+    else {
+        DllCall("ClipCursor", "Ptr", 0)  ; release the clip, otherwise it outlives the game
         SetTimer(WatchEldenRing, 0)
+    }
 }
 ClipCursorToWindow(WindowTitle) {
     WinGetPos(&X, &Y, &Width, &Height, WindowTitle)
     Rect := Buffer(16, 0)
     for index, value in [X, Y, X + Width, Y + Height]
         NumPut("Int", value, Rect, 4 * (index - 1))
-    DllCall("ClipCursor", "UInt", Rect.Ptr)
+    DllCall("ClipCursor", "Ptr", Rect.Ptr)
 }
 
 WinWaitClose(AHK_ER_EXE)

@@ -34,7 +34,8 @@ else {
 }
 
 Sleep 2000
-if not WinExist("ahk_exe OverBind.exe") {
+; OverBind lives in the system tray (hidden window), so check the process, not the window
+if not ProcessExist("OverBind.exe") {
     Run("C:\Program Files\OverBind\OverBind.exe")
     Sleep 2000
     if WinExist("ahk_exe OverBind.exe") {
@@ -43,6 +44,8 @@ if not WinExist("ahk_exe OverBind.exe") {
     }
 }
 
+if !WinWait("ahk_exe Hollow Knight Silksong.exe", , 120)
+    ExitApp
 WinWaitClose("ahk_exe Hollow Knight Silksong.exe")
 ; Cleanup
 if ProcessExist("OverBind.exe") {

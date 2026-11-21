@@ -12,7 +12,7 @@ r:: ESC
 
 #HotIf WinActive("ahk_exe Hollow Knight.exe")
 
-1::ESC
+r:: ESC
 
 #HotIf WinActive("ahk_exe Nioh3.exe")
 
