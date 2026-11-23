@@ -1,8 +1,14 @@
 # 🗡️ AhkScripts
 
-<img align="right" width="120" alt="AHK Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Modern_AutoHotkey_Logo_%28no_text%29.svg/1280px-Modern_AutoHotkey_Logo_%28no_text%29.svg.png">
+<img align="right" width="120" alt="AHK Logo" src="docs/images/ahk-logo.svg">
 
 My personal collection of [AutoHotkey v2](https://www.autohotkey.com/) scripts. These scripts create shortcuts, key bindings and macros that I use in games and in my daily life.
+
+AHK makes any key-bind possible, no matter how weird, and covers the gaps that games leave in their controls, i.e.:
+
+* rebind "Win", "CapsLock" for gaming only without any heavy software;
+* Dota 2: "Alt+`" just doesn't work for some Source 2 reason;
+* Elden Ring: kbm controls are just not streamlined well.
 
 ## 📦 What's inside
 
@@ -19,12 +25,9 @@ My personal collection of [AutoHotkey v2](https://www.autohotkey.com/) scripts. 
 1. Install [AutoHotkey v2](https://www.autohotkey.com/) (v2 specifically - the scripts use v2 syntax).
 2. Run `main.ahk`.
 
-More details (compiling, running on startup, launcher setup) are in the wiki.
+More details (compiling, running on startup, launcher setup) are in the [installation guide](docs/installation.md).
 
-## 📖 Wiki
+## 📖 Docs
 
-> [!IMPORTANT]
-> I really like the GitHub wiki format, so most of the information lives in the [🏠 Wiki](https://github.com/Aluerie/AhkScripts/wiki) instead of being packed into this `README.md`:
-
-* [🛠️ Installation Guide](https://github.com/Aluerie/AhkScripts/wiki/🛠️-Installation-Guide) - running, compiling, auto-start and game launchers;
-* [🤯 Practices Tips](https://github.com/Aluerie/AhkScripts/wiki/🤯-Practices-Tips) - AHK notes, hotkey prefixes and common mistakes.
+* [🛠️ Installation Guide](docs/installation.md) - running, compiling, auto-start and game launchers;
+* [🤯 Practices Tips](docs/tips.md) - AHK notes, hotkey prefixes and common mistakes.
