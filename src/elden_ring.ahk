@@ -14,11 +14,13 @@ MapButton := "3"
 
 ; SECTION 2. BASE FUNCTIONS
 
+/**
+ * Press the `EventAction + SecondaryKey` combo.
+ * Used in Elden Ring for "EVENT_ACTION + something" keybinds like Pouch keys.
+ * If `EventAction` is already held down, it stays held afterwards.
+ * @param SecondaryKey Key name to press while `EventAction` is held, i.e. "Up" or "4"
+ */
 EventActionCombo(SecondaryKey) {
-    /* Press `EVENT_ACTION + secondary_key` combo.
-    
-    Used in Elden Ring for "EVENT_ACTION + something" keybinds like Pouch keys.
-    */
     AlreadyHeld := GetKeyState(EventAction)
     if (!AlreadyHeld)
         Send "{" EventAction " down}"
@@ -27,21 +29,25 @@ EventActionCombo(SecondaryKey) {
         Send "{" EventAction " up}"
 }
 
+/**
+ * Hold down a key for a specified duration before releasing it.
+ * It seems Elden Ring and some other games do not recognize normal ways of sending a key, i.e. simply `Send`.
+ * But separate `key down` and `key up` events do work.
+ * @param Key Key name, i.e. "e" or "escape"
+ * @param Duration How long to hold the key, in ms (0 means the default of 30 ms)
+ */
 PressKey(Key, Duration := 0) {
-    /* Holds down a key for a specified duration before releasing it.
-    
-    It seems Elden Ring and some other games do not recognize normal ways of sending a key, i.e. simply `Send`.
-    But separate `key down` and `key up` events do work.
-    */
     Send "{" Key " down}"
     Sleep Duration ? Duration : 30
     Send "{" Key " up}"
 }
 
+/**
+ * Press a sequence of keys one after another.
+ * @param sequence Array of key names, i.e. ["escape", "down", "e"]
+ * @param time_between_presses Pause between keys, in ms (0 means the default of 23 ms)
+ */
 PressSequence(sequence, time_between_presses := 0) {
-    /* Press sequence of keys.
-    
-    */
     for index, value in sequence {
         PressKey(value)
         Sleep time_between_presses ? time_between_presses : 23
