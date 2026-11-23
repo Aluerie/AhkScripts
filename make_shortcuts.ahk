@@ -1,5 +1,5 @@
 /*
-Creates Windows shortcuts (.lnk) in shortcuts\ink for every launcher script in shortcuts\*.ahk.
+Creates Start Menu shortcuts (.lnk) for every launcher script in shortcuts\*.ahk, ready to search for and pin to Start.
 
 A launcher describes its shortcuts with comment lines:
     ; @shortcut <Name>                 - a shortcut without arguments
@@ -8,13 +8,14 @@ A launcher describes its shortcuts with comment lines:
 Without any `@shortcut` line, the script gets one shortcut named after its file.
 Without `@icon`, the icon is taken from the script's `TraySetIcon("...")` line.
 
-Old shortcuts that point to a launcher script are deleted first, so renamed or removed ones don't linger.
+Old Start Menu shortcuts that point to a launcher script are deleted first, so renamed or removed ones don't linger.
+Other Start Menu shortcuts are left alone. Keep a shortcut's name unchanged so its Start pin keeps pointing at it.
 Usage: double-click, or run `make_shortcuts.ahk` from a terminal in this folder.
 */
 #Requires AutoHotkey v2.0
 
 LAUNCHERS_DIR := A_ScriptDir "\shortcuts"
-OUT_DIR := LAUNCHERS_DIR "\ink"
+OUT_DIR := A_Programs  ; %AppData%\Microsoft\Windows\Start Menu\Programs
 
 ; Patterns for the lines we look for in a launcher
 SHORTCUT_LINE := "^\s*;\s*@shortcut\s+([^|]+?)\s*(?:\|\s*(.*?))?\s*$"  ; "; @shortcut Name | args"  (the "| args" part is optional)
@@ -26,7 +27,6 @@ Report := []  ; lines to show when we're done
 Main()
 
 Main() {
-    DirCreate(OUT_DIR)
     DeleteOldShortcuts()
 
     loop files LAUNCHERS_DIR "\*.ahk" {
@@ -38,7 +38,7 @@ Main() {
 }
 
 /**
- * Delete the .lnk files in the output folder that point to a launcher script.
+ * Delete the .lnk files in the Start Menu folder that point to a launcher script.
  * Shortcuts pointing anywhere else are left alone.
  */
 DeleteOldShortcuts() {
@@ -87,7 +87,7 @@ ReadShortcuts(Script) {
 }
 
 /**
- * Create `<Name>.lnk` in the output folder that runs the launcher script with the shortcut's arguments.
+ * Create `<Name>.lnk` in the Start Menu folder that runs the launcher script with the shortcut's arguments.
  * @param Script Full path to the launcher .ahk
  * @param Shortcut Object with `Name`, `Args` and `Icon`
  */
