@@ -1,0 +1,8 @@
+#!/bin/sh
+# Rebuild and restart main.exe after a commit that changes the always-running script (main.ahk or src/).
+# Enabled per clone with: git config core.hooksPath .githooks
+
+if git diff-tree --root --no-commit-id --name-only -r HEAD | grep -qE '^(main\.ahk$|src/)'; then
+    echo "post-commit: main.ahk or src/ changed, rebuilding main.exe..."
+    cmd.exe //c "$(cygpath -w "$(git rev-parse --show-toplevel)")\\build.bat" /nopause
+fi
