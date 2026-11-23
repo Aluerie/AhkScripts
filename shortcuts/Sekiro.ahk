@@ -18,11 +18,12 @@ WinSetStyle(-0xC40000, "ahk_exe sekiro.exe")
 WinMove(0, 0, A_ScreenWidth, A_ScreenHeight, "ahk_exe sekiro.exe")
 Sleep 2000
 
+; PS. I started using my own CameraFix mods so feel free to delete these FPSUnlock lines later 
 ; STEP 3. FPS Unlocked to disable camera auto rotate
 ; For some reason, FPS Unlock .exe requires admin rights by default and it's just not possible to take them away
 ; by any normal means. Therefore, we have to launch it via an extra .bat file that fixes it.
-Run("C:\_GAMES\Sekiro Helpers\FPSUnlock\launch_no_admin.bat", "C:\_GAMES\Sekiro Helpers\FPSUnlock")
-Sleep 2000
+; Run("C:\_GAMES\Sekiro Helpers\FPSUnlock\launch_no_admin.bat", "C:\_GAMES\Sekiro Helpers\FPSUnlock")
+; Sleep 2000
 
 ; STEP 4. Helper Apps
 for index, app in [
@@ -36,15 +37,15 @@ for index, app in [
 }
 
 ; STEP 5. Close FPS Unlocker
-Sleep 2000
-if WinExist("ahk_exe SekiroFpsUnlockAndMore_v1.2.5.2.exe")
-    WinClose("ahk_exe SekiroFpsUnlockAndMore_v1.2.5.2.exe")
+; Sleep 2000
+; if WinExist("ahk_exe SekiroFpsUnlockAndMore_v1.2.5.2.exe")
+;     WinClose("ahk_exe SekiroFpsUnlockAndMore_v1.2.5.2.exe")
 
 ; STEP 6. Close helper apps when we close Sekiro
 WinWaitClose("ahk_exe sekiro.exe")
 for index, window in [
     "SekiroTool",
-    "LiveSplit",
+    ; "LiveSplit",
     "AutoHitCounter",
     "javaw", ; it's Save Organizer
 ] {

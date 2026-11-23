@@ -7,10 +7,10 @@ My personal collection of [AutoHotkey v2](https://www.autohotkey.com/) scripts. 
 ## 📦 What's inside
 
 * **`main.ahk`** - the always-running script. Every key-bind below is only active while its game window is focused:
-  * `src/games/dota2.ahk` - Dota 2 (binding "unbindable" keys like `Esc` and ``Alt+` ``, rate-limited taunt on mouse wheel);
-  * `src/games/elden_ring.ahk` - Elden Ring (pouch / two-hand combos, menu macros, KBM quality-of-life rebinds);
-  * `src/games/sekiro.ahk` - Sekiro;
-  * `src/games/variety.ahk` - small fixes for variety games
+  * `src/dota2.ahk` - Dota 2 (binding "unbindable" keys like `Esc` and ``Alt+` ``, rate-limited taunt on mouse wheel);
+  * `src/elden_ring.ahk` - Elden Ring (pouch / two-hand combos, menu macros, KBM quality-of-life rebinds);
+  * `src/sekiro.ahk` - Sekiro;
+  * `src/variety.ahk` - small fixes for variety games
 * **`shortcuts/`** - one-click game launchers (Elden Ring, Sekiro, Silksong) that start the game with its helper apps and close them when the game exits.
 * **`archive/`** - old snippets for games I no longer play.
 

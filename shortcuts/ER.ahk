@@ -48,7 +48,7 @@ ClipCursorToWindow(WindowTitle) {
 
 WinWaitClose(AHK_ER_EXE)
 for index, window in [
-    "LiveSplit",
+    ; "LiveSplit",
     "AutoHitCounter",
     "TarnishedTool",
     "javaw", ; it's Save Organizer

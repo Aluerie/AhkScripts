@@ -15,7 +15,6 @@ ListLines False
 ProcessSetPriority "AboveNormal"  ; "Realtime"
 SendMode "InputThenPlay"
 
-
 #Include %A_ScriptDir%\src\dota2.ahk
 #Include %A_ScriptDir%\src\elden_ring.ahk
 #include %A_ScriptDir%\src\sekiro.ahk

@@ -19,10 +19,12 @@ EventActionCombo(SecondaryKey) {
     
     Used in Elden Ring for "EVENT_ACTION + something" keybinds like Pouch keys.
     */
-    if (!Getkeystate(EventAction))
+    AlreadyHeld := GetKeyState(EventAction)
+    if (!AlreadyHeld)
         Send "{" EventAction " down}"
     PressKey(SecondaryKey, 50)
-    Send "{" EventAction " up}"
+    if (!AlreadyHeld)
+        Send "{" EventAction " up}"
 }
 
 PressKey(Key, Duration := 0) {
