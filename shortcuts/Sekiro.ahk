@@ -3,6 +3,7 @@ A Special shortcut to launch Sekiro in Border-less mode and some helper apps wit
 */
 
 #Requires AutoHotkey v2.0
+; @shortcut Sekiro (ahk)
 TraySetIcon("C:\_GAMES\Sekiro - Shadows Die Twice\2.ico")
 
 ; STEP 1. Launch Sekiro

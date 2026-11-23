@@ -1,4 +1,9 @@
 #Requires AutoHotkey v2.0
+; @shortcut Silksong Vanilla
+; @shortcut Silksong Modded | --modded
+; @shortcut Silksong Release-Modded | --release
+; @shortcut Silksong Release-Vanilla | --vanilla-release
+; @icon C:\_GAMES\Silksong\goggame-1558393671.ico
 
 TraySetIcon("C:\_GAMES\Silksong\Hollow Knight Silksong.exe")
 

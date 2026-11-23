@@ -2,6 +2,7 @@
 A Special shortcut to launch Elden Ring and some helper apps with a single click.
 */
 #Requires AutoHotkey v2.0
+; @shortcut ER (ahk)
 TraySetIcon("C:\_GAMES\Elden Ring\Game\eldenring.exe")
 
 AHK_ER_EXE := "ahk_exe eldenring.exe"
