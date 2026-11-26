@@ -37,4 +37,4 @@ These are separate one-shot scripts, not part of `main.ahk`. Each one launches a
 Run `make_shortcuts.ahk` to add a Start Menu shortcut for each launcher (one per Silksong variant, with its argument). Search for them in Start and pin the ones you like. Re-run it after adding, renaming or removing a launcher or a `; @shortcut` line.
 
 > [!WARNING]
-> All game and helper paths are hard-coded (`C:\_GAMES\...`, `C:\Program Files\OverBind\...`, the Cogfly profile in `%AppData%`), and `me3.exe` must be on `PATH`. Edit the paths inside each script to use them on another PC.
+> All game and helper paths are hard-coded (`C:\_GAMES\...`, the OverBind fork build in `D:\CODE\_FORKS\OverBind\...`, the Cogfly profile in `%AppData%`), and `me3.exe` must be on `PATH`. Edit the paths inside each script to use them on another PC.

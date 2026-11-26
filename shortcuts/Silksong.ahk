@@ -41,7 +41,8 @@ else {
 Sleep 2000
 ; OverBind lives in the system tray (hidden window), so check the process, not the window
 if not ProcessExist("OverBind.exe") {
-    Run("C:\Program Files\OverBind\OverBind.exe")
+    ; My OverBind fork, with mouse button binds (Mouse4/Mouse5 -> LT/RT)
+    Run("D:\CODE\_FORKS\OverBind\src-tauri\target\release\OverBind.exe")
     Sleep 2000
     if WinExist("ahk_exe OverBind.exe") {
         ; This brings it into the system tray
