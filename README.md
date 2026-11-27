@@ -17,9 +17,7 @@ AHK makes any key-bind possible, no matter how weird, and covers the gaps that g
   * `src/elden_ring.ahk` - Elden Ring (pouch / two-hand combos, menu macros, KBM quality-of-life rebinds);
   * `src/sekiro.ahk` - Sekiro;
   * `src/variety.ahk` - small fixes for variety games
-* **`shortcuts/`** - one-click launchers that start an app with its helpers and close them when it exits:
-  * games: Elden Ring, Sekiro, Silksong;
-  * OBS: opens an SSH tunnel to my Twitch bot's VPS for the stream overlays.
+* **`shortcuts/`** - one-click game launchers (Elden Ring, Sekiro, Silksong) that start the game with its helper apps and close them when the game exits.
 * **`archive/`** - old snippets for games I no longer play.
 
 ## 🚀 Quick start
